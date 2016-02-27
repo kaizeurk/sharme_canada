@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <labels>
+  	<label name='welcome'>
+  		<message lang='fr'>Bienvenu</message>
+  		<message lang='en'>Welcome</message>
+  	</label>
+  	<label name='connexion'>
+  		<message lang='fr'>Se connecter</message>
+  		<message lang='en'>Loggin</message>
+  	</label>
+  </labels>
