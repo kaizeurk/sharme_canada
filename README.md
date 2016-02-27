@@ -1,4 +1,4 @@
-MusicStore-FrameworkMVC
+Sharme-canada
 =======================
 
-Application de e-commerce construite avec le framework MVC
+Application web construite avec le framework MVC
