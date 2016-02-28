@@ -20,6 +20,14 @@
 	{
 	   $langId = 'fr';
 	}
+	if($_SESSION['member'])
+	{
+		$member = $_SESSION['member'];
+	}
+	else 
+	{
+		$member = null;
+	}
 	require 'lang/messages.php';
 ?>
 <!DOCTYPE html>
@@ -108,16 +116,15 @@
 					</ul>
 				</div>
 				<!-- /LANGUAGE -->
-
-                               
+                        
 				       <?php if (!isset($member)): ?>
 				<!-- Se connecter -->
 				<div class="pull-right nav signin-dd">
-					<a id="quick_sign_in" href="connexion/" data-toggle="dropdown"><i class="fa fa-users"></i><span class="hidden-xs"><?php echo $lang['MENU_CONNEXION']['fr'] ?></span></a>
+					<a id="quick_sign_in" href="/../sharme_frame/connexion/" data-toggle="dropdown"><i class="fa fa-users"></i><span class="hidden-xs"><?php echo $lang['MENU_CONNEXION']['fr'] ?></span></a>
 					<div class="dropdown-menu" role="menu" aria-labelledby="quick_sign_in">
 
-						<h4><a href="connexion/"><?php echo $lang['MENU_CONNEXION'][$langId] ?></a></h4>
-						<form action="connexion/" method="post" role="form">
+						<h4><a href="/../sharme_frame/connexion/"><?php echo $lang['MENU_CONNEXION'][$langId] ?></a></h4>
+						<form action="/../sharme_frame/connexion/" method="post" role="form">
 
 							<div class="form-group"><!-- email -->
 								<input required type="email" class="form-control" placeholder="Username or email">
@@ -150,13 +157,15 @@
 						<!--<a href="#" class="btn-google-plus fullwidth radius3"><i class="fa fa-google-plus"></i> Connect With Google</a>-->
 
 						<p class="bottom-create-account">
-							<a href="connexion/">Cr&#233;er manuellement votre compte</a>
+							<a href="/../sharme_frame/connexion/signup">Cr&#233;er manuellement votre compte</a>
 						</p>
 					</div>
 				</div>
-				<!-- /Se connecter -->
+				<!-- /Se déconnecter -->
 				       <?php else: ?>
-                                    <div class="pull-right nav">Bienvenu, <?= $this->clean($member['firstname']) ?>  </div>
+                           <div class="pull-right nav">Bienvenu, <?= $this->clean($member['firstname']) ?>
+                              &nbsp;<a href="/../sharme_frame/connexion/disconnect"><?php echo $lang['MENU_DISCONNECT'][$langId] ?></a>
+                           </div>
                        <?php endif ?>
 
 				<!-- CART MOBILE BUTTON -->

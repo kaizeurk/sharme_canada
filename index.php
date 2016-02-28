@@ -4,7 +4,7 @@
 
 require 'Framework/Router.php';
 //xdebug_start_trace(null,XDEBUG_TRACE_APPEND);
-xdebug_break();
+//xdebug_break();
 $router = new Router();
 $router->routerRequest();
 //xdebug_stop_trace();

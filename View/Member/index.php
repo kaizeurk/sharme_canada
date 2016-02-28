@@ -22,7 +22,7 @@ $this->title = $prenomNom;
         <div class="form-group">
             <label class="col-sm-4 col-md-5 control-label">Adresse</label>
             <div class="col-sm-6 col-md-4">
-                <input name="adresse" type="text" class="form-control" required value="<?= $this->clean($member['adresse']) ?>">
+                <input name="address" type="text" class="form-control" required value="<?= $this->clean($member['address']) ?>">
             </div>
         </div>
         <div class="form-group">

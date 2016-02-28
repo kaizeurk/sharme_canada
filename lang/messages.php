@@ -16,6 +16,7 @@
   $lang['MENU_OUR_PRODUCTS'] = array("fr"=>"Aceuil", "en"=>"Home");'Our products';
   $lang['MENU_CONTACT_US']   = array("fr"=>"Nous joindre", "en"=>"Contact Us");
   $lang['MENU_CONNEXION']    = array("fr"=>"Se connecter", "en"=>"Connexion");
+  $lang['MENU_DISCONNECT']  = array("fr"=>"Se déconnecter", "en"=>"Disconnect");
   $lang['MENU_SITE_MAP']     = array("fr"=>"Aceuil", "en"=>"Home");
   $lang['MENU_LANG']         = array("fr"=>"Francais","en"=>"English");
   

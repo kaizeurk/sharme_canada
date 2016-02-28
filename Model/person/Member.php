@@ -77,8 +77,12 @@ class Member extends Model
 	 * @var integer
 	 */
 	private $status;					# Member's status.
-
-    private $sql = "select MEMBER_ID as id, LASTNAME as lastname, FIRSTNAME as firstname, ADRESSE as adresse, EMAIL as email, PASSWORD as password
+    
+	/**
+	 * SQL request to get member
+	 * @var String 
+	 */
+    private $sql = "select MEMBER_ID as id, LASTNAME as lastname, FIRSTNAME as firstname, ADDRESS as address, EMAIL as email, PASSWORD as password
             from T_MEMBER";
 	
 	const STATUS_ACTIVE = 1;			# Member is active.
@@ -381,7 +385,7 @@ class Member extends Model
      */
     public function connecter($courriel, $mdp)
     {
-        $sql = "select MEMBER-ID from T_MEMBER where EMAIL=? and PASSWORD=?";
+        $sql = "select MEMBER_ID from T_MEMBER where EMAIL=? and PASSWORD=?";
         $member = $this->executeRequest($sql, array($courriel, $mdp));
         return ($member->rowCount() == 1);
     }
@@ -398,7 +402,7 @@ class Member extends Model
     {
         $sql = $this->sql . " where EMAIL=? and PASSWORD=?";
         $member = $this->executeRequest($sql, array($courriel, $mdp));
-        if ($member->rowCount() == 1)
+        if ($member->rowCount() >= 1)
             return $member->fetch();  // Accès à la première ligne de résultat
         else
             throw new Exception("Aucun member ne correspond aux identifiants fournis");
@@ -430,12 +434,12 @@ class Member extends Model
      * @param type $courriel
      * @param type $mdp
      */
-    public function addMember($nom, $prenom, $adresse, $courriel, $mdp)
+    public function addMember($nom, $prenom, $addresse, $courriel, $mdp)
     {
-        $sql = "insert into T_MEMBER(LASTNAME, FIRSTNAME, ADRESSE, EMAIL, PASSWORD)
+        $sql = "insert into T_MEMBER(LASTNAME, FIRSTNAME, ADDRESS, EMAIL, PASSWORD)
             values (?, ?, ?, ?, ?, ?, ?)";
         $this->executeRequest($sql,
-                array($nom, $prenom, $adresse, $courriel, $mdp));
+                array($nom, $prenom, $address, $courriel, $mdp));
     }
 
     /**
@@ -450,11 +454,11 @@ class Member extends Model
      * @param type $courriel
      * @param type $mdp
      */
-    public function setdataMember($id, $nom, $prenom, $adresse, $courriel, $mdp)
+    public function setdataMember($id, $nom, $prenom, $address, $courriel, $mdp)
     {
-        $sql = "update T_MEMBER set LASTNAME=?, FIRSTNAME=?, ADRESSE=?, EMAIL=?,PASSWORD=? where MEMBER_ID=?";
+        $sql = "update T_MEMBER set LASTNAME=?, FIRSTNAME=?, ADDRESS=?, EMAIL=?,PASSWORD=? where MEMBER_ID=?";
         $this->executeRequest($sql,
-                array($nom, $prenom, $adresse, $courriel, $mdp, $idClient));
+                array($nom, $prenom, $address, $courriel, $mdp, $idClient));
     }
 }
 

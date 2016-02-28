@@ -37,18 +37,18 @@ class ControllerMember extends ControllerSecurise
     public function setdata()
     {
         if ($this->request->existParameter("nom") && $this->request->existParameter("prenom") &&
-                $this->request->existParameter("adresse") && $this->request->existParameter("courriel") &&
+                $this->request->existParameter("address") && $this->request->existParameter("courriel") &&
                 $this->request->existParameter("mdp")) 
         {
             $nom = $this->request->getParameter("nom");
             $prenom = $this->request->getParameter("prenom");
-            $adresse = $this->request->getParameter("adresse");
+            $address = $this->request->getParameter("address");
             $courriel = $this->request->getParameter("courriel");
             $mdp = $this->request->getParameter("mdp");
 
             $member = $this->request->getSession()->getAttribut("member");
             $idMember = $member['idMember'];
-            $this->member->setdataMember($idMember, $nom, $prenom, $adresse, $courriel, $mdp);
+            $this->member->setdataMember($idMember, $nom, $prenom, $address, $courriel, $mdp);
             
             $member = $this->member->getMemberbyId($idMember);
             $this->request->getSession()->setAttribut("member", $member);

@@ -28,15 +28,20 @@ class ControllerConnexion extends Controller
 
     public function connecter()
     {
-        if ($this->request->existParameter("courriel") && $this->request->existParameter("mdp")) {
+    true;
+       xdebug_break();
+    	if ($this->request->existParameter("courriel") && $this->request->existParameter("mdp")) 
+    	{
             $courriel = $this->request->getParameter("courriel");
             $mdp = $this->request->getParameter("mdp");
+            
             if ($this->member->connecter($courriel, $mdp)) {
                 $this->accueillirMember($courriel, $mdp);
             }
             else
-                $this->generateView(array('msgErreur' => 'Member inconnu'),
-                        "index");
+            {
+                $this->generateView(array('msgErreur' => 'Member inconnu'),"index");
+            }
         }
         else
             throw new Exception("Action impossible : courriel ou mot de passe non défini");
@@ -45,10 +50,10 @@ class ControllerConnexion extends Controller
     /**
      * 
      */
-    public function deconnecter()
+    public function disconnect()
     {
     	$this->request->getSession()->destroy();
-    	$this->redirect("accueil");
+    	$this->redirect("");
     }
     
     /**
@@ -62,16 +67,16 @@ class ControllerConnexion extends Controller
     public function inscrire()
     {
         if ($this->request->existParameter("nom") && $this->request->existParameter("prenom") &&
-                $this->request->existParameter("adresse") && $this->request->existParameter("courriel") &&
+                $this->request->existParameter("address") && $this->request->existParameter("courriel") &&
                 $this->request->existParameter("mdp")) 
         {
             $nom = $this->request->getParameter("nom");
             $prenom = $this->request->getParameter("prenom");
-            $adresse = $this->request->getParameter("adresse");
+            $address = $this->request->getParameter("address");
             $courriel = $this->request->getParameter("courriel");
             $mdp = $this->request->getParameter("mdp");
 
-            $this->member->addMember($nom, $prenom, $adresse, $courriel, $mdp);
+            $this->member->addMember($nom, $prenom, $address, $courriel, $mdp);
             $this->accueillirMember($courriel, $mdp);
         }
         else

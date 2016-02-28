@@ -7,7 +7,7 @@
 						<li data-transition="fade" data-slotamount="7" data-masterspeed="1500">
 
 							<!-- COVER IMAGE -->
-							<img src="/public_html/sharme_frame/Contenu/assets/images/acceuil/IMG_3120.JPG" alt="" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+							<img src="/../sharme_frame/Contenu/assets/images/acceuil/IMG_3120.JPG" alt="" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
 
 							<!-- LAYER NR. 1 -->
 							<div class="tp-caption lightgrey_divider skewfromrightshort customout"
@@ -132,7 +132,7 @@
 						<li data-transition="3dcurtain-vertical" data-slotamount="14"  data-masterspeed="300" data-delay="10000">
 
 							<!-- COVER IMAGE -->
-							<img src="/public_html/sharme_frame/Contenu/assets/images/acceuil/IMG_3011.JPG" alt="" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat" />
+							<img src="/../sharme_frame/Contenu/assets/images/acceuil/IMG_3011.JPG" alt="" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat" />
 
 							<!--<div class="tp-caption lft boxshadow"
 								data-x="70"
@@ -189,7 +189,7 @@
 						<li data-transition="incube-horizontal" data-slotamount="5" data-masterspeed="700" >
 
 							<!-- COVER IMAGE -->
-							<img src="/public_html/sharme_frame/Contenu/assets/images/acceuil/IMG_2767.JPG" alt="" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+							<img src="/../sharme_frame/Contenu/assets/images/acceuil/IMG_2767.JPG" alt="" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
 
 							<div class="tp-caption large_text sft"
 								data-x="center"
@@ -301,7 +301,7 @@
 
 
 			<!-- PARALLAX -->
-			<section class="parallax delayed margin-footer" data-stellar-background-ratio="0.7" style="background-image: url(/public_html/sharme_frame/Contenu/assets/images/demo/parallax.jpg);">
+			<section class="parallax delayed margin-footer" data-stellar-background-ratio="0.7" style="background-image: url(/../sharme_frame/Contenu/assets/images/demo/parallax.jpg);">
 				<span class="overlay"></span>
 
 				<div class="container">
