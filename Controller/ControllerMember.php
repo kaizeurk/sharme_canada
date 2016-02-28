@@ -4,7 +4,7 @@ require_once 'Controller/ControllerSecurise.php';
 require_once 'Model/person/Member.php';
 
 /**
- * Contrôleur des actions liées au membre
+ * Contrôleur des actions liées au member
  * 
  * @author kaizeurk
  */
@@ -14,15 +14,15 @@ class ControllerMember extends ControllerSecurise
      * 
      * @var Member
      */
-	private $membre;
+	private $member;
 
     public function __construct()
     {
-        $this->membre = new Member();
+        $this->member = new Member();
     }
 
     /**
-     * Affiche la page de modification des infos membre
+     * Affiche la page de modification des infos member
      */
     public function index()
     {
@@ -30,9 +30,9 @@ class ControllerMember extends ControllerSecurise
     }
 
     /**
-     * Modifie les infos membre
+     * Modifie les infos member
      * 
-     * @throws Exception S'il manque des infos membres
+     * @throws Exception S'il manque des infos members
      */
     public function setdata()
     {
@@ -46,12 +46,12 @@ class ControllerMember extends ControllerSecurise
             $courriel = $this->request->getParameter("courriel");
             $mdp = $this->request->getParameter("mdp");
 
-            $membre = $this->request->getSession()->getAttribut("membre");
-            $idMember = $membre['idMember'];
-            $this->membre->setdataMember($idMember, $nom, $prenom, $adresse, $courriel, $mdp);
+            $member = $this->request->getSession()->getAttribut("member");
+            $idMember = $member['idMember'];
+            $this->member->setdataMember($idMember, $nom, $prenom, $adresse, $courriel, $mdp);
             
-            $membre = $this->membre->getMemberbyId($idMember);
-            $this->request->getSession()->setAttribut("membre", $membre);
+            $member = $this->member->getMemberbyId($idMember);
+            $this->request->getSession()->setAttribut("member", $member);
             $this->generateView();
         }
         else

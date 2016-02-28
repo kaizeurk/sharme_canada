@@ -15,7 +15,7 @@
 						<h1>Sign In</h1>
 
 						<ul class="breadcrumb">
-							<li><a href="index.html">Home</a></li>
+							<li><a href="/../sharme_frame/">Home</a></li>
 							<li class="active">Sign In</li>
 						</ul>
 					</div>
@@ -31,7 +31,7 @@
 
 							<h2>Sign <strong>In</strong></h2>
 
-							<form class="white-row" method="post" action="connexion/connecter">
+							<form class="white-row" method="post" action="connecter">
 
 								<!-- alert failed -->
 								<div class="alert alert-danger">
@@ -114,7 +114,7 @@
 
 
 					<p class="white-row">
-						Don't have an account yet? <a href="page-signup.html">Click to create one</a>, it's free!
+						Don't have an account yet? <a href="signup">Click to create one</a>, it's free!
 					</p>
 
 				</section>

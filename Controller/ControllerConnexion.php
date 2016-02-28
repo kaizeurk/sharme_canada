@@ -42,10 +42,21 @@ class ControllerConnexion extends Controller
             throw new Exception("Action impossible : courriel ou mot de passe non défini");
     }
 
+    /**
+     * 
+     */
     public function deconnecter()
     {
-        $this->request->getSession()->destroy();
-        $this->redirect("accueil");
+    	$this->request->getSession()->destroy();
+    	$this->redirect("accueil");
+    }
+    
+    /**
+     * 
+     */
+    public function signup()
+    {
+       $this->generateView();
     }
 
     public function inscrire()
