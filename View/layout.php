@@ -163,7 +163,11 @@
 				</div>
 				<!-- /Se déconnecter -->
 				       <?php else: ?>
-                           <div class="pull-right nav">Bienvenu, <?= $this->clean($member['firstname']) ?>
+                           <div class="pull-right nav">Bienvenu, <a id="info_member" href="/../sharme_frame/member/" data-toggle="dropdown"><?= $this->clean($member['firstname']) ?></a>
+                              <div class="dropdown-menu" role="menu" aria-labelledby="info_member">
+						         <h4><a href="/../sharme_frame/member/">Informations personnelles</a></h4>
+                              	 
+                              </div>
                               &nbsp;<a href="/../sharme_frame/connexion/disconnect"><?php echo $lang['MENU_DISCONNECT'][$langId] ?></a>
                            </div>
                        <?php endif ?>
