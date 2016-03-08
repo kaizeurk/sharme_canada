@@ -13,6 +13,12 @@ class View
 
     /** Titre de la view (défini dans le file view) */
     private $title;
+    
+    /**
+     * 
+     * @var string
+     */
+    private  $racineWeb;
 
     /**
      * Constructeur
@@ -25,6 +31,7 @@ class View
         // Détermination du nom du file view à partir de l'action et du constructeur
         // La convention de nommage des files views est : View/<$controller>/<$action>.php
         $file = "View/";
+        $this->getRacine();
         if ($controller != "") {
             $file = $file . $controller . "/";
         }
@@ -89,6 +96,15 @@ class View
     {
         // Convertit les caractères spéciaux en entités HTML
         return htmlspecialchars($valeur, ENT_QUOTES, 'UTF-8', false);
+    }
+
+    /**
+     * 
+     * @return string
+     */
+    private function getRacine()
+    {
+        $this->racineWeb = DbConnect::get("racineWeb", "/");
     }
 
 }

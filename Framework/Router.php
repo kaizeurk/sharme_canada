@@ -24,7 +24,6 @@ class Router
             // Fusion des paramètres GET et POST de la requête
             // Permet de gérer uniformément ces deux types de requête HTTP
             $request = new Request(array_merge($_GET, $_POST));
-            print_r($request);
             $controller = $this->createController($request);
             $action = $this->createAction($request);
 
@@ -58,7 +57,6 @@ class Router
         $classeController = "Controller" . $controller;
         $fileController = "Controller/" . $classeController . ".php";
 
-        print_r($fileController);
         if (file_exists($fileController)) {
             // Instanciation du contrôleur adapté à la requête
             require($fileController);

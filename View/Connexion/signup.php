@@ -11,7 +11,7 @@
 						<h1>Sign UP</h1>
 
 						<ul class="breadcrumb">
-							<li><a href="/../sharme_frame/">Home</a></li>
+							<li><a href="<?= $this->racineWeb ?>">Home</a></li>
 							<li class="active">Sign UP</li>
 						</ul>
 					</div>
@@ -26,7 +26,7 @@
 						<div class="col-md-6">
 
 							<h2>Create <strong>Account</strong></h2>
-							<form class="white-row" method="post" action="/../sharme_frame/connexion/inscrire">
+							<form class="white-row" method="post" action="connexion/inscrire">
 
 								<!-- alert failed -->
 								<div class="alert alert-danger">
@@ -38,19 +38,54 @@
 									<div class="form-group">
 										<div class="col-md-12">
 											<label>E-mail Address</label>
-											<input type="text" value="" class="form-control">
+											<input name="courriel" type="text" class="form-control">
+										</div>
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="form-group">
+										<div class="col-md-12">
+											<label>Nom</label>
+											<input name="nom" class="form-control">
 										</div>
 									</div>
 								</div>
 								<div class="row">
 									<div class="form-group">
+										<div class="col-md-12">
+											<label>Prénom</label>
+											<input name="prenom" type="text" class="form-control">
+										</div>
+									</div>
+								</div>
+						        <div class="form-group">
+						            <label class="col-sm-4 col-md-5 control-label">Adresse</label>
+						            <div class="col-sm-6 col-md-4">
+						                <input name="address" type="text" class="form-control" value="">
+						            </div>
+						        </div>
+						        <div class="form-group">
+						            <label class="col-sm-4 col-md-5 control-label">Code postal</label>
+						            <div class="col-sm-3 col-md-2">
+						                <input name="codePostal" type="text" class="form-control" value="">
+						            </div>
+						        </div>
+						        <div class="form-group">
+						            <label class="col-sm-4 col-md-5 control-label">Ville</label>
+						            <div class="col-sm-6 col-md-4">
+						                <input name="ville" type="text" class="form-control" required value="">
+						            </div>
+						        </div>
+								<div class="row">
+									<div class="form-group">
 										<div class="col-md-6">
 											<label>Password</label>
-											<input type="password" value="" class="form-control">
+											<input name="mdp" type="password" class="form-control">
 										</div>
 										<div class="col-md-6">
 											<label>Re-enter Password</label>
-											<input type="password" value="" class="form-control">
+											<input name="mdp" type="password" class="form-control">
 										</div>
 									</div>
 								</div>
@@ -87,7 +122,7 @@
 
 								<p>
 									Already have an account?
-									<a href="/../sharme_frame/connexion">Click to Sign In</a>
+									<a href="<?= $this->racineWeb ?>connexion">Click to Sign In</a>
 								</p>
 							</div>
 

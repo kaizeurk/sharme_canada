@@ -29,6 +29,7 @@ abstract class Controller
     public function setRequest(Request $request)
     {
         $this->request = $request;
+        $this->getRacine();
     }
 
     /**
@@ -88,7 +89,17 @@ abstract class Controller
     {
         $racineWeb = DbConnect::get("racineWeb", "/");
         // Redirection vers l'URL /racine_site/controller/action
-        header("Location:" . $racineWeb . $controller . "/" . $action);
+        
+        ($controller!==null && $controller!=="")?header("Location:" . $racineWeb . $controller . "/" . $action):header("Location:" . $racineWeb . "" . $action);
+    }
+
+    /**
+     * 
+     * @return string
+     */
+    protected function getRacine()
+    {
+        $this->racineWeb = DbConnect::get("racineWeb", "/");
     }
 
 }

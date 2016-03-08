@@ -40,6 +40,18 @@ class Member extends Model
 	 *
 	 * @var string
 	 */
+	private $town;   					# Member's town.
+	
+	/**
+	 *
+	 * @var string
+	 */
+	private $postalCode;     			# Member's Postal Code.
+
+	/**
+	 *
+	 * @var string
+	 */
 	private $phoneNumber;				# Member phone number.
 
 	/**
@@ -82,7 +94,7 @@ class Member extends Model
 	 * SQL request to get member
 	 * @var String 
 	 */
-    private $sql = "select MEMBER_ID as id, LASTNAME as lastname, FIRSTNAME as firstname, ADDRESS as address, EMAIL as email, PASSWORD as password
+    private $sql = "select MEMBER_ID as id, LASTNAME as lastname, FIRSTNAME as firstname,TOWN town, CODE_POSTAL, ADDRESS as address, EMAIL as email, PASSWORD as password
             from T_MEMBER";
 	
 	const STATUS_ACTIVE = 1;			# Member is active.
@@ -375,6 +387,41 @@ class Member extends Model
 		$title->setID($value);
 		$this->title = $title;
 	}
+	
+	/**
+	 * 
+	 * @return string
+	 */
+	public function getTown()
+	{
+		return $this->town;
+	}
+	
+	/**
+	 * 
+	 * @param string $value
+	 */
+	public function setTown($value)
+	{
+		$this->town = $value;
+	}
+	
+	/**
+	 * 
+	 */
+	public function getPostalCode()
+	{
+		return $this->postalCode;
+	}
+	
+	/**
+	 * 
+	 * @param unknown $value
+	 */
+	public function setPostalCode($value)
+	{
+		$this->postalCode = $value;
+	}
 
     /**
      * Vérifie q'un member exist dans la BD
@@ -411,7 +458,7 @@ class Member extends Model
     /**
      * Renvoie les infos sur un member
      * 
-     * @param type $idClient
+     * @param type $id
      * @return type
      * @throws Exception
      */
@@ -422,43 +469,69 @@ class Member extends Model
         if ($member->rowCount() == 1)
             return $member->fetch();  // Accès à la première ligne de résultat
         else
-            throw new Exception("Aucun member ne correspond 0 l4identifiqnt fourni");
+            throw new Exception("Aucun member ne correspond 0 l'identifiant fourni");
     }
 
     /**
      * Ajoute un nouveau member
      * 
-     * @param type $nom
-     * @param type $prenom
-     * @param type $adresse
-     * @param type $courriel
-     * @param type $mdp
+     * @param unknown $lastname
+     * @param unknown $firstname
+     * @param unknown $address
+     * @param unknown $town
+     * @param unknown $codepostal
+     * @param unknown $email
+     * @param unknown $mdp
      */
-    public function addMember($nom, $prenom, $addresse, $courriel, $mdp)
+    public function addMember($lastname, $firstname, $address, $town, $codepostal, $email, $mdp)
     {
-        $sql = "insert into T_MEMBER(LASTNAME, FIRSTNAME, ADDRESS, EMAIL, PASSWORD)
+    	$this->initMember($lastname, $firstname, $address, $town, $codepostal, $email, $mdp);
+        $sql = "insert into T_MEMBER(LASTNAME, FIRSTNAME, ADDRESS,TOWN,CODE_POSTAL EMAIL, PASSWORD)
             values (?, ?, ?, ?, ?, ?, ?)";
         $this->executeRequest($sql,
-                array($nom, $prenom, $address, $courriel, $mdp));
+                array($this->getLastName(), $this->getFirstName(), $this->getAddress(),$this->getTown(),$this->getPostalCode(), $this->getEmailMembername(), $this->getPassword()));
     }
 
     /**
      * Modifie un member existant
      * 
-     * @param type $idClient
-     * @param type $nom
-     * @param type $prenom
-     * @param type $adresse
-     * @param type $codePostal
-     * @param type $ville
-     * @param type $courriel
-     * @param type $mdp
+     * @param unknown $lastname
+     * @param unknown $firstname
+     * @param unknown $address
+     * @param unknown $town
+     * @param unknown $codepostal
+     * @param unknown $email
+     * @param unknown $mdp
+     * @param unknown $id
      */
-    public function setdataMember($id, $nom, $prenom, $address, $courriel, $mdp)
+    public function setdataMember($lastname, $firstname, $address, $town, $codepostal, $email, $mdp, $id)
     {
-        $sql = "update T_MEMBER set LASTNAME=?, FIRSTNAME=?, ADDRESS=?, EMAIL=?,PASSWORD=? where MEMBER_ID=?";
+    	$this->initMember($lastname, $firstname, $address, $town, $codepostal, $email, $mdp);
+        $sql = "update T_MEMBER set LASTNAME=?, FIRSTNAME=?, ADDRESS=?,TOWN=?, CODE_POSTAL=?, EMAIL=?,PASSWORD=? where MEMBER_ID=?";
         $this->executeRequest($sql,
-                array($nom, $prenom, $address, $courriel, $mdp, $idClient));
+                array($this->getLastName(), $this->getFirstName(), $this->getAddress(),$this->getTown(),$this->getPostalCode(), $this->getEmailMembername(), $this->getPassword(), $id));
+    }
+    
+    /**
+     * 
+     * @param unknown $lastname
+     * @param unknown $firstname
+     * @param unknown $address
+     * @param unknown $town
+     * @param unknown $codepostal
+     * @param unknown $email
+     * @param unknown $mdp
+     */
+    private function initMember($lastname, $firstname, $address, $town, $codepostal, $email, $mdp)
+    {
+    	$this->setLastName($lastname);
+    	$this->setFirstName($firstname);
+    	$this->setAddress($address);
+    	$this->setTown($town);
+    	$this->setPostalCode($codepostal);
+    	$this->setEmailMembername($email);
+    	//a faire pour convertir ou encoder
+    	$this->setPassword($mdp);
     }
 }
 

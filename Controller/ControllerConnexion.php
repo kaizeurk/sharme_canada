@@ -28,8 +28,6 @@ class ControllerConnexion extends Controller
 
     public function connecter()
     {
-    true;
-       xdebug_break();
     	if ($this->request->existParameter("courriel") && $this->request->existParameter("mdp")) 
     	{
             $courriel = $this->request->getParameter("courriel");
@@ -63,21 +61,28 @@ class ControllerConnexion extends Controller
     {
        $this->generateView();
     }
-
+    
+    /**
+     * 
+     * @throws Exception
+     */
     public function inscrire()
     {
-        if ($this->request->existParameter("nom") && $this->request->existParameter("prenom") &&
-                $this->request->existParameter("address") && $this->request->existParameter("courriel") &&
+        if ($this->request->existParameter("nom") && 
+        		$this->request->existParameter("prenom") &&
+        		$this->request->existParameter("courriel") &&
                 $this->request->existParameter("mdp")) 
         {
-            $nom = $this->request->getParameter("nom");
-            $prenom = $this->request->getParameter("prenom");
-            $address = $this->request->getParameter("address");
-            $courriel = $this->request->getParameter("courriel");
+            $lastname = $this->request->getParameter("nom");
+            $firstname = $this->request->getParameter("prenom");
+            $address = ($this->request->getParameter("address")!==null)?$this->request->getParameter("address"):null;
+            $town = ($this->request->getParameter("ville")!==null)?$this->request->getParameter("ville"):null;
+            $codepostal = ($this->request->getParameter("codePostal")!==null)?$this->request->getParameter("codePostal"):null;
+            $email = $this->request->getParameter("courriel");
             $mdp = $this->request->getParameter("mdp");
 
-            $this->member->addMember($nom, $prenom, $address, $courriel, $mdp);
-            $this->accueillirMember($courriel, $mdp);
+            $this->member->addMember($lastname, $firstname, $address, $town, $codepostal, $email, $mdp);
+            $this->accueillirMember($email, $mdp);
         }
         else
             throw new Exception("Action impossible : tous les paramètres ne sont pas définis");

@@ -1,5 +1,5 @@
 <?php 
-	if(isSet($_GET['langId']))
+	if(isset($_GET['langId']))
 	{
 	   $langId = $_GET['langId'];
 	 
@@ -8,11 +8,11 @@
 	 
 	   setcookie('langId', $lang, time() + (3600 * 24 * 30));
 	}
-	else if(isSet($_SESSION['langId']))
+	else if(isset($_SESSION['langId']))
 	{
 	   $langId = $_SESSION['langId'];
 	}
-	else if(isSet($_COOKIE['langId']))
+	else if(isset($_COOKIE['langId']))
 	{
 	   $langId = $_COOKIE['langId'];
 	}
@@ -20,7 +20,7 @@
 	{
 	   $langId = 'fr';
 	}
-	if($_SESSION['member'])
+	if(isset($_SESSION['member']))
 	{
 		$member = $_SESSION['member'];
 	}
@@ -48,30 +48,30 @@
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800" rel="stylesheet" type="text/css" />
 
 		<!-- CORE CSS -->
-            <link rel="stylesheet" href="/../sharme_frame/Contenu/assets/plugins/bootstrap/css/bootstrap.min.css" type="text/css" media="all" />
-            <link rel="stylesheet" href="/../sharme_frame/Contenu/assets/css/font-awesome.css" type="text/css" media="all" />
-            <link rel="stylesheet" href="/../sharme_frame/Contenu/assets/plugins/bootstrap/css/bootstrap.min.css" type="text/css" media="all" />
-            <link rel="stylesheet" href="/../sharme_frame/Contenu/assets/plugins/owl-carousel/owl.theme.css" type="text/css" media="all" />
-            <link rel="stylesheet" href="/../sharme_frame/Contenu/assets/plugins/owl-carousel/owl.transitions.css" type="text/css" media="all" />
-            <link rel="stylesheet" href="/../sharme_frame/Contenu/assets/plugins/magnific-popup/magnific-popup.css" type="text/css" media="all" />
-            <link rel="stylesheet" href="/../sharme_frame/Contenu/assets/css/animate.css" type="text/css" media="all" />
-            <link rel="stylesheet" href="/../sharme_frame/Contenu/assets/css/superslides.css" type="text/css" media="all" />
+            <link rel="stylesheet" href="<?=$racineWeb ?>/Contenu/assets/plugins/bootstrap/css/bootstrap.min.css" type="text/css" media="all" />
+            <link rel="stylesheet" href="<?=$racineWeb ?>/Contenu/assets/css/font-awesome.css" type="text/css" media="all" />
+            <link rel="stylesheet" href="<?=$racineWeb ?>/Contenu/assets/plugins/bootstrap/css/bootstrap.min.css" type="text/css" media="all" />
+            <link rel="stylesheet" href="<?=$racineWeb ?>/Contenu/assets/plugins/owl-carousel/owl.theme.css" type="text/css" media="all" />
+            <link rel="stylesheet" href="<?=$racineWeb ?>/Contenu/assets/plugins/owl-carousel/owl.transitions.css" type="text/css" media="all" />
+            <link rel="stylesheet" href="<?=$racineWeb ?>/Contenu/assets/plugins/magnific-popup/magnific-popup.css" type="text/css" media="all" />
+            <link rel="stylesheet" href="<?=$racineWeb ?>/Contenu/assets/css/animate.css" type="text/css" media="all" />
+            <link rel="stylesheet" href="<?=$racineWeb ?>/Contenu/assets/css/superslides.css" type="text/css" media="all" />
 
         <!--{# REVOLUTION SLIDER #}-->
-            <link rel="stylesheet" href="/../sharme_frame/Contenu/assets/plugins/revolution-slider/css/settings.css" type="text/css" media="all" />
+            <link rel="stylesheet" href="<?=$racineWeb ?>/Contenu/assets/plugins/revolution-slider/css/settings.css" type="text/css" media="all" />
 
        <!--{# THEME CSS #}-->
-            <link rel="stylesheet" href="/../sharme_frame/Contenu/assets/css/essentials.css" type="text/css" media="all" />
-            <link rel="stylesheet" href="/../sharme_frame/Contenu/assets/css/layout.css" type="text/css" media="all" />
-            <link rel="stylesheet" href="/../sharme_frame/Contenu/assets/css/layout-responsive.css" type="text/css" media="all" />
-            <link rel="stylesheet" href="/../sharme_frame/Contenu/assets/css/color_scheme/orange.css" type="text/css" media="all" />
+            <link rel="stylesheet" href="<?=$racineWeb ?>/Contenu/assets/css/essentials.css" type="text/css" media="all" />
+            <link rel="stylesheet" href="<?=$racineWeb ?>/Contenu/assets/css/layout.css" type="text/css" media="all" />
+            <link rel="stylesheet" href="<?=$racineWeb ?>/Contenu/assets/css/layout-responsive.css" type="text/css" media="all" />
+            <link rel="stylesheet" href="<?=$racineWeb ?>/Contenu/assets/css/color_scheme/orange.css" type="text/css" media="all" />
 
         <!--{# STYLESWITCHER - REMOVE ON PRODUCTION/DEVELOPMENT #}-->
-            <link rel="stylesheet" href="/../sharme_frame/Contenu/assets/plugins/styleswitcher/styleswitcher.css" type="text/css" media="all" />
+            <link rel="stylesheet" href="<?=$racineWeb ?>/Contenu/assets/plugins/styleswitcher/styleswitcher.css" type="text/css" media="all" />
 
 
 
-            <script type="text/javascript" src="/../sharme_frame/Contenu/assets/plugins/modernizr.min.js"></script>
+            <script type="text/javascript" src="<?=$racineWeb ?>/Contenu/assets/plugins/modernizr.min.js"></script>
 
 	</head>
 	<body><!-- Available classes for body: boxed , pattern1...pattern10 . Background Image - example add: data-background="assets/images/boxed_background/1.jpg"  -->
@@ -89,28 +89,28 @@
 				<!-- LANGUAGE -->
 				<div class="btn-group pull-right hidden-xs">
 					<button class="dropdown-toggle language" type="button" data-toggle="dropdown">
-                        <img src="/../sharme_frame/Contenu/assets/images/icon/canada_ico.png" width="16" height="11" alt="FR Language" /> Francais <span class="caret"></span>
+                        <img src="<?=$racineWeb ?>/Contenu/assets/images/icon/canada_ico.png" width="16" height="11" alt="FR Language" /> Francais <span class="caret"></span>
 					</button>
 
 					<ul class="dropdown-menu">
 						<li>
 							<a href="#">
-                                <img src="/../sharme_frame/Contenu/assets/images/flags/us.png" width="16" height="11" alt="EN Language" /> [US] English
+                                <img src="<?=$racineWeb ?>/Contenu/assets/images/flags/us.png" width="16" height="11" alt="EN Language" /> [US] English
 							</a>
 						</li>
 						<li>
 							<a href="#">
-                                <img src="/../sharme_frame/Contenu/assets/images/flags/de.png" width="16" height="11" alt="EN Language" /> [DE] German
+                                <img src="<?=$racineWeb ?>/Contenu/assets/images/flags/de.png" width="16" height="11" alt="EN Language" /> [DE] German
 							</a>
 						</li>
 						<li>
 							<a href="#">
-								<img src="/../sharme_frame/Contenu/assets/images/icon/canada_ico.png" width="16" height="11" alt="FR Language" /> [FR] French
+								<img src="<?=$racineWeb ?>/Contenu/assets/images/icon/canada_ico.png" width="16" height="11" alt="FR Language" /> [FR] French
 							</a>
 						</li>
 						<li>
 							<a href="#">
-								<img src="/../sharme_frame/Contenu/assets/images/flags/ru.png" width="16" height="11" alt="FR Language" /> [RU] Russian
+								<img src="<?=$racineWeb ?>/Contenu/assets/images/flags/ru.png" width="16" height="11" alt="FR Language" /> [RU] Russian
 							</a>
 						</li>
 					</ul>
@@ -120,20 +120,20 @@
 				       <?php if (!isset($member)): ?>
 				<!-- Se connecter -->
 				<div class="pull-right nav signin-dd">
-					<a id="quick_sign_in" href="/../sharme_frame/connexion/" data-toggle="dropdown"><i class="fa fa-users"></i><span class="hidden-xs"><?php echo $lang['MENU_CONNEXION']['fr'] ?></span></a>
+					<a id="quick_sign_in" href="<?=$racineWeb ?>connexion/" data-toggle="dropdown"><i class="fa fa-users"></i><span class="hidden-xs"><?php echo $lang['MENU_CONNEXION']['fr'] ?></span></a>
 					<div class="dropdown-menu" role="menu" aria-labelledby="quick_sign_in">
 
-						<h4><a href="/../sharme_frame/connexion/"><?php echo $lang['MENU_CONNEXION'][$langId] ?></a></h4>
-						<form action="/../sharme_frame/connexion/" method="post" role="form">
+						<h4><a href="<?=$racineWeb ?>connexion/"><?php echo $lang['MENU_CONNEXION'][$langId] ?></a></h4>
+						<form action="<?=$racineWeb ?>connexion/connecter/" method="post" role="connecter">
 
 							<div class="form-group"><!-- email -->
-								<input required type="email" class="form-control" placeholder="Username or email">
+								<input required type="email" name="courriel" class="form-control" placeholder="Username or email">
 							</div>
 
 							<div class="input-group">
 
 								<!-- password -->
-								<input required type="password" class="form-control" placeholder="Password">
+								<input required  name="mdp" type="password" class="form-control" placeholder="Password">
 
 								<!-- submit button -->
 								<span class="input-group-btn">
@@ -157,18 +157,18 @@
 						<!--<a href="#" class="btn-google-plus fullwidth radius3"><i class="fa fa-google-plus"></i> Connect With Google</a>-->
 
 						<p class="bottom-create-account">
-							<a href="/../sharme_frame/connexion/signup">Cr&#233;er manuellement votre compte</a>
+							<a href="<?=$racineWeb ?>connexion/signup">Cr&#233;er manuellement votre compte</a>
 						</p>
 					</div>
 				</div>
 				<!-- /Se déconnecter -->
 				       <?php else: ?>
-                           <div class="pull-right nav">Bienvenu, <a id="info_member" href="/../sharme_frame/member/" data-toggle="dropdown"><?= $this->clean($member['firstname']) ?></a>
+                           <div class="pull-right nav">Bienvenu, <a id="info_member" href="<?=$racineWeb ?>member/" data-toggle="dropdown"><?= $this->clean($member['firstname']) ?></a>
                               <div class="dropdown-menu" role="menu" aria-labelledby="info_member">
-						         <h4><a href="/../sharme_frame/member/">Informations personnelles</a></h4>
+						         <h4><a href="<?=$racineWeb ?>member/">Informations personnelles</a></h4>
                               	 
                               </div>
-                              &nbsp;<a href="/../sharme_frame/connexion/disconnect"><?php echo $lang['MENU_DISCONNECT'][$langId] ?></a>
+                              &nbsp;<a href="<?=$racineWeb ?>connexion/disconnect"><?php echo $lang['MENU_DISCONNECT'][$langId] ?></a>
                            </div>
                        <?php endif ?>
 
@@ -198,7 +198,7 @@
 
 				<!-- Logo text or image -->
 				<a class="logo" href="<?=$racineWeb ?>">
-					SH<img src="/../sharme_frame/Contenu/assets/images/icon/canada-qc.png" alt="SHARME"/>RME CANADA
+					SH<img src="<?=$racineWeb ?>Contenu/assets/images/icon/canada-qc.png" alt="SHARME"/>RME CANADA
 				</a>
 
 				<!-- Top Nav -->
@@ -415,7 +415,7 @@
 						<!-- FOOTER LOGO -->
 						<div class="column logo col-md-4 text-center">
 							<div class="logo-content">
-								<img class="animate_fade_in" src="/../sharme_frame/Contenu/assets/images/icon/logo2.png" width="200" alt="" />
+								<img class="animate_fade_in" src="<?=$racineWeb ?>/Contenu/assets/images/icon/logo2.png" width="200" alt="" />
 								<h4>SHARME CANADA</h4>
 							</div>
 						</div>
@@ -456,31 +456,31 @@
 
 
 		<!-- JAVASCRIPT FILES -->
-            <script type="text/javascript" src="/../sharme_frame/Contenu/assets/plugins/jquery-2.1.3.min.js"></script>
-            <script type="text/javascript" src="/../sharme_frame/Contenu/assets/plugins/jquery.easing.1.3.js"></script>
-            <script type="text/javascript" src="/../sharme_frame/Contenu/assets/plugins/jquery.cookie.js"></script>
-            <script type="text/javascript" src="/../sharme_frame/Contenu/assets/plugins/jquery.appear.js"></script>
-            <script type="text/javascript" src="/../sharme_frame/Contenu/assets/plugins/jquery.isotope.js"></script>
-            <script type="text/javascript" src="/../sharme_frame/Contenu/assets/plugins/masonry.js"></script>
+            <script type="text/javascript" src="<?=$racineWeb ?>/Contenu/assets/plugins/jquery-2.1.3.min.js"></script>
+            <script type="text/javascript" src="<?=$racineWeb ?>/Contenu/assets/plugins/jquery.easing.1.3.js"></script>
+            <script type="text/javascript" src="<?=$racineWeb ?>/Contenu/assets/plugins/jquery.cookie.js"></script>
+            <script type="text/javascript" src="<?=$racineWeb ?>/Contenu/assets/plugins/jquery.appear.js"></script>
+            <script type="text/javascript" src="<?=$racineWeb ?>/Contenu/assets/plugins/jquery.isotope.js"></script>
+            <script type="text/javascript" src="<?=$racineWeb ?>/Contenu/assets/plugins/masonry.js"></script>
 
 
-            <script type="text/javascript" src="/../sharme_frame/Contenu/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-            <script type="text/javascript" src="/../sharme_frame/Contenu/assets/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
-            <script type="text/javascript" src="/../sharme_frame/Contenu/assets/plugins/owl-carousel/owl.carousel.min.js"></script>
-            <script type="text/javascript" src="/../sharme_frame/Contenu/assets/plugins/stellar/jquery.stellar.min.js"></script>
-            <script type="text/javascript" src="/../sharme_frame/Contenu/assets/plugins/knob/js/jquery.knob.js"></script>
-            <script type="text/javascript" src="/../sharme_frame/Contenu/assets/plugins/jquery.backstretch.min.js"></script>
-            <script type="text/javascript" src="/../sharme_frame/Contenu/assets/plugins/superslides/dist/jquery.superslides.min.js"></script>
-            <script type="text/javascript" src="/../sharme_frame/Contenu/assets/plugins/styleswitcher/styleswitcher.js"></script>
+            <script type="text/javascript" src="<?=$racineWeb ?>/Contenu/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+            <script type="text/javascript" src="<?=$racineWeb ?>/Contenu/assets/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+            <script type="text/javascript" src="<?=$racineWeb ?>/Contenu/assets/plugins/owl-carousel/owl.carousel.min.js"></script>
+            <script type="text/javascript" src="<?=$racineWeb ?>/Contenu/assets/plugins/stellar/jquery.stellar.min.js"></script>
+            <script type="text/javascript" src="<?=$racineWeb ?>/Contenu/assets/plugins/knob/js/jquery.knob.js"></script>
+            <script type="text/javascript" src="<?=$racineWeb ?>/Contenu/assets/plugins/jquery.backstretch.min.js"></script>
+            <script type="text/javascript" src="<?=$racineWeb ?>/Contenu/assets/plugins/superslides/dist/jquery.superslides.min.js"></script>
+            <script type="text/javascript" src="<?=$racineWeb ?>/Contenu/assets/plugins/styleswitcher/styleswitcher.js"></script>
 
-            <script type="text/javascript" src="/../sharme_frame/Contenu/assets/plugins/mediaelement/build/mediaelement-and-player.min.js"></script>
+            <script type="text/javascript" src="<?=$racineWeb ?>/Contenu/assets/plugins/mediaelement/build/mediaelement-and-player.min.js"></script>
 
 
-            <script type="text/javascript" src="/../sharme_frame/Contenu/assets/plugins/revolution-slider/js/jquery.themepunch.tools.min.js"></script>
-            <script type="text/javascript" src="/../sharme_frame/Contenu/assets/plugins/revolution-slider/js/jquery.themepunch.revolution.min.js"></script>
-            <script type="text/javascript" src="/../sharme_frame/Contenu/assets/js/slider_revolution.js"></script>
+            <script type="text/javascript" src="<?=$racineWeb ?>/Contenu/assets/plugins/revolution-slider/js/jquery.themepunch.tools.min.js"></script>
+            <script type="text/javascript" src="<?=$racineWeb ?>/Contenu/assets/plugins/revolution-slider/js/jquery.themepunch.revolution.min.js"></script>
+            <script type="text/javascript" src="<?=$racineWeb ?>/Contenu/assets/js/slider_revolution.js"></script>
 
-            <script type="text/javascript" src="/../sharme_frame/Contenu/assets/js/scripts.js"></script>
+            <script type="text/javascript" src="<?=$racineWeb ?>/Contenu/assets/js/scripts.js"></script>
 
 
 
