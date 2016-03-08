@@ -75,9 +75,9 @@ class ControllerConnexion extends Controller
         {
             $lastname = $this->request->getParameter("nom");
             $firstname = $this->request->getParameter("prenom");
-            $address = ($this->request->getParameter("address")!==null)?$this->request->getParameter("address"):null;
-            $town = ($this->request->getParameter("ville")!==null)?$this->request->getParameter("ville"):null;
-            $codepostal = ($this->request->getParameter("codePostal")!==null)?$this->request->getParameter("codePostal"):null;
+            $address = ($this->request->existParameter("address"))?$this->request->getParameter("address"):null;
+            $town = ($this->request->existParameter("ville"))?$this->request->getParameter("ville"):null;
+            $codepostal = ($this->request->existParameter("codePostal"))?$this->request->getParameter("codePostal"):null;
             $email = $this->request->getParameter("courriel");
             $mdp = $this->request->getParameter("mdp");
 

@@ -26,7 +26,7 @@
 						<div class="col-md-6">
 
 							<h2>Create <strong>Account</strong></h2>
-							<form class="white-row" method="post" action="connexion/inscrire">
+							<form class="white-row" method="post" action="inscrire">
 
 								<!-- alert failed -->
 								<div class="alert alert-danger">
@@ -74,7 +74,7 @@
 						        <div class="form-group">
 						            <label class="col-sm-4 col-md-5 control-label">Ville</label>
 						            <div class="col-sm-6 col-md-4">
-						                <input name="ville" type="text" class="form-control" required value="">
+						                <input name="ville" type="text" class="form-control" value="">
 						            </div>
 						        </div>
 								<div class="row">

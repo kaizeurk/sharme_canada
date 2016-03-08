@@ -36,19 +36,22 @@ class ControllerMember extends ControllerSecurise
      */
     public function setdata()
     {
-        if ($this->request->existParameter("nom") && $this->request->existParameter("prenom") &&
-                $this->request->existParameter("address") && $this->request->existParameter("courriel") &&
-                $this->request->existParameter("mdp")) 
+        if ($this->request->existParameter("nom") && 
+            $this->request->existParameter("prenom") &&
+        	$this->request->existParameter("courriel") &&
+            $this->request->existParameter("mdp")) 
         {
-            $nom = $this->request->getParameter("nom");
-            $prenom = $this->request->getParameter("prenom");
-            $address = $this->request->getParameter("address");
-            $courriel = $this->request->getParameter("courriel");
+            $lastname = $this->request->getParameter("nom");
+            $firstname = $this->request->getParameter("prenom");
+            $address = ($this->request->existParameter("address"))?$this->request->getParameter("address"):null;
+            $town = ($this->request->existParameter("ville"))?$this->request->getParameter("ville"):null;
+            $codepostal = ($this->request->existParameter("codePostal"))?$this->request->getParameter("codePostal"):null;
+            $email = $this->request->getParameter("courriel");
             $mdp = $this->request->getParameter("mdp");
 
             $member = $this->request->getSession()->getAttribut("member");
             $idMember = $member['idMember'];
-            $this->member->setdataMember($idMember, $nom, $prenom, $address, $courriel, $mdp);
+            $this->member->setdataMember($lastname, $firstname, $address, $town, $codepostal, $email, $mdp, $idMember);
             
             $member = $this->member->getMemberbyId($idMember);
             $this->request->getSession()->setAttribut("member", $member);

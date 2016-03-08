@@ -486,7 +486,7 @@ class Member extends Model
     public function addMember($lastname, $firstname, $address, $town, $codepostal, $email, $mdp)
     {
     	$this->initMember($lastname, $firstname, $address, $town, $codepostal, $email, $mdp);
-        $sql = "insert into T_MEMBER(LASTNAME, FIRSTNAME, ADDRESS,TOWN,CODE_POSTAL EMAIL, PASSWORD)
+        $sql = "insert into T_MEMBER(LASTNAME, FIRSTNAME, ADDRESS,TOWN,CODE_POSTAL, EMAIL, PASSWORD)
             values (?, ?, ?, ?, ?, ?, ?)";
         $this->executeRequest($sql,
                 array($this->getLastName(), $this->getFirstName(), $this->getAddress(),$this->getTown(),$this->getPostalCode(), $this->getEmailMembername(), $this->getPassword()));
