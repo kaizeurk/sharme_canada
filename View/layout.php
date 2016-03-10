@@ -40,6 +40,9 @@
 		<meta name="keywords" content="HTML5,CSS3,Template" />
 		<meta name="description" content="" />
 		<meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
+		
+		<!-- ICON -->
+        <link rel="shortcut icon" href="<?=$racineWeb ?>Contenu/assets/images/icon/canada-qc.png">
 
 		<!-- mobile settings -->
 		<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
@@ -54,8 +57,9 @@
             <link rel="stylesheet" href="<?=$racineWeb ?>/Contenu/assets/plugins/owl-carousel/owl.theme.css" type="text/css" media="all" />
             <link rel="stylesheet" href="<?=$racineWeb ?>/Contenu/assets/plugins/owl-carousel/owl.transitions.css" type="text/css" media="all" />
             <link rel="stylesheet" href="<?=$racineWeb ?>/Contenu/assets/plugins/magnific-popup/magnific-popup.css" type="text/css" media="all" />
-            <link rel="stylesheet" href="<?=$racineWeb ?>/Contenu/assets/css/animate.css" type="text/css" media="all" />
             <link rel="stylesheet" href="<?=$racineWeb ?>/Contenu/assets/css/superslides.css" type="text/css" media="all" />
+            <link rel="stylesheet" href="<?=$racineWeb ?>/Contenu/assets/css/animate.css" type="text/css" media="all" />
+            <link rel="stylesheet" href="<?=$racineWeb ?>/Contenu/assets/css/blog.css" type="text/css" media="all" />
 
         <!--{# REVOLUTION SLIDER #}-->
             <link rel="stylesheet" href="<?=$racineWeb ?>/Contenu/assets/plugins/revolution-slider/css/settings.css" type="text/css" media="all" />
@@ -242,7 +246,7 @@
 								</ul>
 							</li>
 							<li class="dropdown mega-menu-item mega-menu-two-columns">
-                            <a class="dropdown-toggle" href="{{ path('sharmecanadaplatform_about') }}">Apropos<i class="fa fa-angle-down"></i></a>
+                            <a class="dropdown-toggle" href="<?=$racineWeb ?>about">Apropos<i class="fa fa-angle-down"></i></a>
 
 							</li>
 							<li class="dropdown mega-menu-item mega-menu-fullwidth">

@@ -38,7 +38,7 @@
 									<div class="form-group">
 										<div class="col-md-12">
 											<label>E-mail Address</label>
-											<input name="courriel" type="text" class="form-control">
+											<input name="courriel" type="text" required class="form-control">
 										</div>
 									</div>
 								</div>
@@ -46,46 +46,52 @@
 								<div class="row">
 									<div class="form-group">
 										<div class="col-md-12">
-											<label>Nom</label>
-											<input name="nom" class="form-control">
+										    <label>Nom</label>
+											<input name="nom" required class="form-control">
 										</div>
 									</div>
 								</div>
 								<div class="row">
 									<div class="form-group">
+     									<label class="col-sm-4 col-md-12 control-label">Prénom</label>
 										<div class="col-md-12">
-											<label>Prénom</label>
-											<input name="prenom" type="text" class="form-control">
+											<input name="prenom" required type="text" class="form-control">
 										</div>
 									</div>
 								</div>
-						        <div class="form-group">
-						            <label class="col-sm-4 col-md-5 control-label">Adresse</label>
-						            <div class="col-sm-6 col-md-4">
-						                <input name="address" type="text" class="form-control" value="">
-						            </div>
-						        </div>
-						        <div class="form-group">
-						            <label class="col-sm-4 col-md-5 control-label">Code postal</label>
-						            <div class="col-sm-3 col-md-2">
-						                <input name="codePostal" type="text" class="form-control" value="">
-						            </div>
-						        </div>
-						        <div class="form-group">
-						            <label class="col-sm-4 col-md-5 control-label">Ville</label>
-						            <div class="col-sm-6 col-md-4">
-						                <input name="ville" type="text" class="form-control" value="">
-						            </div>
-						        </div>
+								<div class="row">
+							        <div class="form-group">
+							            <label class="col-sm-4 col-md-12 control-label">Adresse</label>
+							            <div class="col-md-12">
+							                <input name="address" type="text" class="form-control" value="">
+							            </div>
+							        </div>
+							    </div>
+								<div class="row">
+							        <div class="form-group">
+							            <label class="col-sm-4 col-md-12 control-label">Code postal</label>
+							            <div class="col-md-12">
+							                <input name="codePostal" type="text" class="form-control" value="">
+							            </div>
+							        </div>
+							    </div>
+								<div class="row">
+							        <div class="form-group">
+							            <label class="col-md-12 control-label">Ville</label>
+							            <div class="col-md-12">
+							                <input name="ville" type="text" class="form-control" value="">
+							            </div>
+							        </div>
+							    </div>
 								<div class="row">
 									<div class="form-group">
 										<div class="col-md-6">
 											<label>Password</label>
-											<input name="mdp" type="password" class="form-control">
+											<input name="mdp" type="password" required class="form-control">
 										</div>
 										<div class="col-md-6">
 											<label>Re-enter Password</label>
-											<input name="mdp" type="password" class="form-control">
+											<input name="mdp" type="password" required class="form-control">
 										</div>
 									</div>
 								</div>

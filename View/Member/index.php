@@ -16,7 +16,7 @@ $this->title = $firstnameNom;
         <div class="form-group">
             <label class="col-sm-4 col-md-5 control-label">Prénome</label>
             <div class="col-sm-6 col-md-4">
-                <input name="firstname" type="text" class="form-control" required value="<?= $this->clean($member['firstname']) ?>">
+                <input name="lastname" type="text" class="form-control" required value="<?= $this->clean($member['lastname']) ?>">
             </div>
         </div>
         <div class="form-group">
@@ -26,7 +26,7 @@ $this->title = $firstnameNom;
             </div>
         </div>
         <div class="form-group">
-            <label class="col-sm-4 col-md-5 control-label">Code postal</label>
+            <label class="col-sm-4 col-md-5 control-label">Code postal/Code Zip</label>
             <div class="col-sm-3 col-md-2">
                 <input name="codePostal" type="text" class="form-control" required value="<?= isset($member['codePostal'])?$this->clean($member['codePostal']):"" ?>">
             </div>

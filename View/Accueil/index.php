@@ -219,7 +219,7 @@
 								data-start="2700"
 								data-endeasing="Bounce.easeOut"
 								data-easing="Back.easeInOut">
-								<a class="btn btn-primary btn-lg" target="_blank" href="https://wrapbootstrap.com/theme/atropos-responsive-website-template-WB05SR527">INTEGRER SHARME?</a>
+								<a class="btn btn-primary btn-lg" target="_blank" href="<?=$this->racineWeb ?>connexion/signup">INTEGRER SHARME?</a>
 							</div>
 
 						</li>
@@ -294,7 +294,7 @@
 			<!-- CALLOUT -->
 			<div class="bs-callout margin-top text-center styleBackground noradius">
 				<h3>Bienvenu dans l'application de <strong>Sharme Canada</strong> Nous sommes la pour <strong>Vous</strong>.
-				<a href="{{ path('sharmecanada_user_loggup" class="btn btn-primary btn-lg">S'inscrire</a></h3>
+				<a href="<?=$this->racineWeb ?>connexion/signup" class="btn btn-primary btn-lg">S'inscrire</a></h3>
 			</div>
 			<!-- /CALLOUT -->
 
@@ -320,7 +320,7 @@
 								<small><em> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc.</em></small>
 							</p>
 
-							<a class="btn btn-primary btn-lg" href="{{ path('sharmecanadaplatform_about">En savoir plus</a>
+							<a class="btn btn-primary btn-lg" href="<?=$this->racineWeb ?>about">En savoir plus</a>
 						</div>
 
 						<!-- right image
