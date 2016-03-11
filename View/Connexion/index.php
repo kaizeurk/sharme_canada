@@ -31,7 +31,7 @@
 
 							<h2>Sign <strong>In</strong></h2>
 
-							<form class="white-row" method="post" action="connecter">
+							<form class="white-row" method="post" action="connexion/connecter">
 
 								<!-- alert failed -->
 								<div class="alert alert-danger">
