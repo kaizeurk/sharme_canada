@@ -93,28 +93,18 @@
 				<!-- LANGUAGE -->
 				<div class="btn-group pull-right hidden-xs">
 					<button class="dropdown-toggle language" type="button" data-toggle="dropdown">
-                        <img src="<?=$racineWeb ?>/Contenu/assets/images/icon/canada_ico.png" width="16" height="11" alt="FR Language" /> Francais <span class="caret"></span>
+                        <?php include_once 'View/_Commun/changelanguage.php'; ?>
 					</button>
 
 					<ul class="dropdown-menu">
 						<li>
-							<a href="#">
+							<a id="idEn" href="#">
                                 <img src="<?=$racineWeb ?>/Contenu/assets/images/flags/us.png" width="16" height="11" alt="EN Language" /> [US] English
 							</a>
 						</li>
 						<li>
-							<a href="#">
-                                <img src="<?=$racineWeb ?>/Contenu/assets/images/flags/de.png" width="16" height="11" alt="EN Language" /> [DE] German
-							</a>
-						</li>
-						<li>
-							<a href="#">
+							<a id="idFr" href="#">
 								<img src="<?=$racineWeb ?>/Contenu/assets/images/icon/canada_ico.png" width="16" height="11" alt="FR Language" /> [FR] French
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<img src="<?=$racineWeb ?>/Contenu/assets/images/flags/ru.png" width="16" height="11" alt="FR Language" /> [RU] Russian
 							</a>
 						</li>
 					</ul>
@@ -485,6 +475,7 @@
             <script type="text/javascript" src="<?=$racineWeb ?>/Contenu/assets/js/slider_revolution.js"></script>
 
             <script type="text/javascript" src="<?=$racineWeb ?>/Contenu/assets/js/scripts.js"></script>
+            <script type="text/javascript" src="<?=$racineWeb ?>/Contenu/assets/js/languageAjax.js"></script>
 
 
 

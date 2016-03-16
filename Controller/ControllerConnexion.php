@@ -42,7 +42,10 @@ class ControllerConnexion extends Controller
             }
         }
         else
-            throw new Exception("Action impossible : courriel ou mot de passe non défini");
+        {
+        	$this->generateView(array('msgErreur' => 'Action impossible : courriel ou mot de passe non défin'),"index",false);        	
+           // throw new Exception("Action impossible : courriel ou mot de passe non défini");
+        }
     }
 
     /**
@@ -100,5 +103,6 @@ class ControllerConnexion extends Controller
         $this->request->getSession()->setAttribut("member", $member);
         $this->redirect("accueil");
     }
+    
 
 }

@@ -219,7 +219,7 @@
 								data-start="2700"
 								data-endeasing="Bounce.easeOut"
 								data-easing="Back.easeInOut">
-								<a class="btn btn-primary btn-lg" target="_blank" href="<?=$this->racineWeb ?>connexion/signup">INTEGRER SHARME?</a>
+								<a class="btn btn-primary btn-lg" href="<?=$this->racineWeb ?>connexion/signup">INTEGRER SHARME?</a>
 							</div>
 
 						</li>

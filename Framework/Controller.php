@@ -40,11 +40,13 @@ abstract class Controller
      */
     public function executeAction($action)
     {
-        if (method_exists($this, $action)) {
+        true;
+    	if (method_exists($this, $action)) {
             $this->action = $action;
             $this->{$this->action}();
         }
-        else {
+        else 
+        {
             $classeController = get_class($this);
             throw new Exception("Action '$action' non définie dans la classe $classeController");
         }
@@ -62,18 +64,20 @@ abstract class Controller
      * @param array $donneesView Données nécessaires pour la génération de la view
      * @param string $action Action associée à la view (permet à un contrôleur de générer une view pour une action spécifique)
      */
-    protected function generateView($donneesView = array(), $action = null)
+    protected function generateView($donneesView = array(), $action = null, $paramAction = true)
     {
         // Utilisation de l'action actuelle par défaut
         $actionView = $this->action;
-        if ($action != null) {
+        	
+        if ($action != null) 
+        {
             // Utilisation de l'action passée en paramètre
             $actionView = $action;
         }
         // Utilisation du nom du contrôleur actuel
         $classeController = get_class($this);
         $controllerView = str_replace("Controller", "", $classeController);
-
+       // if(!$paramAction && ($this->request->existParameter('action'))==true) $this->request->getParameter(['action']) = $this->action;
         // Instanciation et génération de la view
         $view = new View($actionView, $controllerView);
         $view->generate($donneesView);
@@ -100,6 +104,15 @@ abstract class Controller
     protected function getRacine()
     {
         $this->racineWeb = DbConnect::get("racineWeb", "/");
+    }
+
+    /**
+     * 
+     * @param string $langId
+     */
+    public function setLanguage()
+    {
+    	$this->request->getSession()->setAttribut("langId", $_POST['langId']);
     }
 
 }
