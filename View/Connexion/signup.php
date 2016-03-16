@@ -11,7 +11,7 @@
 						<h1>Sign UP</h1>
 
 						<ul class="breadcrumb">
-							<li><a href="<?= $this->racineWeb ?>">Home</a></li>
+							<li><a href="<?= $this->racineWebFront ?>">Home</a></li>
 							<li class="active">Sign UP</li>
 						</ul>
 					</div>
@@ -128,7 +128,7 @@
 
 								<p>
 									Already have an account?
-									<a href="<?= $this->racineWeb ?>connexion">Click to Sign In</a>
+									<a href="<?= $this->racineWebFront ?>connexion">Click to Sign In</a>
 								</p>
 							</div>
 

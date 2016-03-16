@@ -6,7 +6,7 @@
 					<h1>Apropos de <strong>Nous</strong></h1>
 
 					<ul class="breadcrumb">
-						<li><a href="<?=$this->racineWeb ?>">Accueil</a></li>
+						<li><a href="<?=$this->racineWebFront ?>">Accueil</a></li>
 						<li class="active">Apropos de nous</li>
 					</ul>
 				</div>
@@ -135,13 +135,13 @@
 					<div class="col-md-6">
 						<div class="owl-carousel controlls-over" data-plugin-options='{"items": 1, "singleItem": true, "navigation": true, "pagination": true, "transitionStyle":"fadeUp"}'>
 							<div>
-								<img class="img-responsive" src="<?=$this->racineWeb ?>Contenu/assets/images/apropos/IMG_2734.JPG" width="555" height="311" alt="">
+								<img class="img-responsive" src="<?=$this->racineWebFront ?>Contenu/assets/images/apropos/IMG_2734.JPG" width="555" height="311" alt="">
 							</div>
 							<div>
-								<img class="img-responsive" src="<?=$this->racineWeb ?>Contenu/assets/images/apropos/IMG_2737.JPG" width="555" height="311" alt="">
+								<img class="img-responsive" src="<?=$this->racineWebFront ?>Contenu/assets/images/apropos/IMG_2737.JPG" width="555" height="311" alt="">
 							</div>
 							<div>
-								<img class="img-responsive" src="<?=$this->racineWeb ?>Contenu/assets/images/apropos/IMG_3120.JPG" width="555" height="311" alt="">
+								<img class="img-responsive" src="<?=$this->racineWebFront ?>Contenu/assets/images/apropos/IMG_3120.JPG" width="555" height="311" alt="">
 							</div>
 						</div>
 					</div>
@@ -262,7 +262,7 @@
 							<div class="col-sm-6 col-md-3"><!-- item 1 -->
 								<div class="item-box fixed-box">
 									<figure>
-										<img class="img-responsive" src="<?=$this->racineWeb ?>Contenu/assets/images/apropos/Roland.png" width="263" height="263" alt="">
+										<img class="img-responsive" src="<?=$this->racineWebFront ?>Contenu/assets/images/apropos/Roland.png" width="263" height="263" alt="">
 									</figure>
 									<div class="item-box-desc">
 										<h4>Roland</h4>
@@ -280,7 +280,7 @@
 							<div class="col-sm-6 col-md-3"><!-- item 2 -->
 								<div class="item-box fixed-box">
 									<figure>
-										<img class="img-responsive" src="<?=$this->racineWeb ?>Contenu/assets/images/apropos/Richard.png" width="263" height="263" alt="">
+										<img class="img-responsive" src="<?=$this->racineWebFront ?>Contenu/assets/images/apropos/Richard.png" width="263" height="263" alt="">
 									</figure>
 									<div class="item-box-desc">
 										<h4>Richard</h4>
@@ -298,7 +298,7 @@
 							<div class="col-sm-6 col-md-3"><!-- item 3 -->
 								<div class="item-box fixed-box">
 									<figure>
-										<img class="img-responsive" src="<?=$this->racineWeb ?>Contenu/assets/images/apropos/Justin.JPG" width="263" height="263" alt="">
+										<img class="img-responsive" src="<?=$this->racineWebFront ?>Contenu/assets/images/apropos/Justin.JPG" width="263" height="263" alt="">
 									</figure>
 									<div class="item-box-desc">
 										<h4>Justin</h4>
@@ -316,7 +316,7 @@
 							<div class="col-sm-6 col-md-3"><!-- item 4 -->
 								<div class="item-box fixed-box">
 									<figure>
-										<img class="img-responsive" src="<?=$this->racineWeb ?>Contenu/assets/images/apropos/Josue.png" width="263" height="263" alt="">
+										<img class="img-responsive" src="<?=$this->racineWebFront ?>Contenu/assets/images/apropos/Josue.png" width="263" height="263" alt="">
 									</figure>
 									<div class="item-box-desc">
 										<h4>Josué</h4>
@@ -342,28 +342,28 @@
 
 					<div class="owl-carousel" data-plugin-options='{"items": 8, "singleItem": false, "autoPlay": true, "navigation": false, "pagination": false}'>
 						<div>
-							<img class="img-responsive" src="<?=$this->racineWeb ?>Contenu/assets/images/demo/brands/1.jpg" alt="">
+							<img class="img-responsive" src="<?=$this->racineWebFront ?>Contenu/assets/images/demo/brands/1.jpg" alt="">
 						</div>
 						<div>
-							<img class="img-responsive" src="<?=$this->racineWeb ?>Contenu/assets/images/demo/brands/2.jpg" alt="">
+							<img class="img-responsive" src="<?=$this->racineWebFront ?>Contenu/assets/images/demo/brands/2.jpg" alt="">
 						</div>
 						<div>
-							<img class="img-responsive" src="<?=$this->racineWeb ?>Contenu/assets/images/demo/brands/3.jpg" alt="">
+							<img class="img-responsive" src="<?=$this->racineWebFront ?>Contenu/assets/images/demo/brands/3.jpg" alt="">
 						</div>
 						<div>
-							<img class="img-responsive" src="<?=$this->racineWeb ?>Contenu/assets/images/demo/brands/4.jpg" alt="">
+							<img class="img-responsive" src="<?=$this->racineWebFront ?>Contenu/assets/images/demo/brands/4.jpg" alt="">
 						</div>
 						<div>
-							<img class="img-responsive" src="<?=$this->racineWeb ?>Contenu/assets/images/demo/brands/5.jpg" alt="">
+							<img class="img-responsive" src="<?=$this->racineWebFront ?>Contenu/assets/images/demo/brands/5.jpg" alt="">
 						</div>
 						<div>
-							<img class="img-responsive" src="<?=$this->racineWeb ?>Contenu/assets/images/demo/brands/6.jpg" alt="">
+							<img class="img-responsive" src="<?=$this->racineWebFront ?>Contenu/assets/images/demo/brands/6.jpg" alt="">
 						</div>
 						<div>
-							<img class="img-responsive" src="<?=$this->racineWeb ?>Contenu/assets/images/demo/brands/7.jpg" alt="">
+							<img class="img-responsive" src="<?=$this->racineWebFront ?>Contenu/assets/images/demo/brands/7.jpg" alt="">
 						</div>
 						<div>
-							<img class="img-responsive" src="<?=$this->racineWeb ?>Contenu/assets/images/demo/brands/8.jpg" alt="">
+							<img class="img-responsive" src="<?=$this->racineWebFront ?>Contenu/assets/images/demo/brands/8.jpg" alt="">
 						</div>
 					</div>
 				

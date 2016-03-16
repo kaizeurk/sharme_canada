@@ -20,6 +20,13 @@ class View
      */
     private  $racineWeb;
 
+
+    /**
+     *
+     * @var string
+     */
+    private  $racineWebFront;
+
     /**
      * Constructeur
      * 
@@ -53,7 +60,7 @@ class View
         $racineWeb = DbConnect::get("racineWeb", "/");
         // Génération du gabarit commun utilisant la partie spécifique
         $view = $this->generateFile('View/layout.php',
-                array('title' => $this->title, 'contenu' => $contenu, 'racineWeb' => $racineWeb));
+                array('title' => $this->title, 'contenu' => $contenu, 'racineWeb' => $racineWeb, 'racineWebFront'=>$this->racineWebFront));
         // Renvoi de la view générée au navigateur
         echo $view;
     }
@@ -104,7 +111,8 @@ class View
      */
     private function getRacine()
     {
-        $this->racineWeb = DbConnect::get("racineWeb", "/");
+        $this->racineWeb      = DbConnect::get("racineWeb", "/");
+        $this->racineWebFront = DbConnect::get("racineWebFront", "/");
     }
 
 }

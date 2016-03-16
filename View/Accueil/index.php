@@ -132,7 +132,7 @@
 						<li data-transition="3dcurtain-vertical" data-slotamount="14"  data-masterspeed="300" data-delay="10000">
 
 							<!-- COVER IMAGE -->
-							<img src="<?=$this->racineWeb ?>Contenu/assets/images/acceuil/IMG_3011.JPG" alt="" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat" />
+							<img src="<?=$this->racineWebFront ?>Contenu/assets/images/acceuil/IMG_3011.JPG" alt="" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat" />
 
 							<!--<div class="tp-caption lft boxshadow"
 								data-x="70"
@@ -189,7 +189,7 @@
 						<li data-transition="incube-horizontal" data-slotamount="5" data-masterspeed="700" >
 
 							<!-- COVER IMAGE -->
-							<img src="<?=$this->racineWeb ?>Contenu/assets/images/acceuil/IMG_2767.JPG" alt="" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+							<img src="<?=$this->racineWebFront ?>Contenu/assets/images/acceuil/IMG_2767.JPG" alt="" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
 
 							<div class="tp-caption large_text sft"
 								data-x="center"
@@ -219,7 +219,7 @@
 								data-start="2700"
 								data-endeasing="Bounce.easeOut"
 								data-easing="Back.easeInOut">
-								<a class="btn btn-primary btn-lg" href="<?=$this->racineWeb ?>connexion/signup">INTEGRER SHARME?</a>
+								<a class="btn btn-primary btn-lg" href="<?=$this->racineWebFront ?>connexion/signup">INTEGRER SHARME?</a>
 							</div>
 
 						</li>
