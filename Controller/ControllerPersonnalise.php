@@ -19,7 +19,8 @@ abstract class ControllerPersonnalise extends Controller
         $member = null;
         $nbArticlesPanier = 0;
         // Si les infos member sont présente dans la session...
-        if ($this->request->getSession()->existAttribut("member")) {
+        if ($this->request->getSession()->existAttribut("member")) 
+        {
             // ... on les récupère ...
             $member = $this->request->getSession()->getAttribut("member");
             

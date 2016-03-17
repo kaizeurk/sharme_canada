@@ -294,7 +294,7 @@
 
 							</li>
 							<li class="dropdown">
-					            <a href="{{ path('sharmecanadaplatform_contact') }}">Contact<i class="fa fa-angle-down"></i></a>
+					            <a href="<?=$racineWebFront ?>contact">Contact<i class="fa fa-angle-down"></i></a>
 
 							</li>
 
