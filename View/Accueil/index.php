@@ -7,7 +7,7 @@
 						<li data-transition="fade" data-slotamount="7" data-masterspeed="1500">
 
 							<!-- COVER IMAGE -->
-							<img src="<?=$this->racineWeb ?>Contenu/assets/images/acceuil/IMG_3120.JPG" alt="" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat"><
+							<img src="<?=$this->racineWebFront ?>Contenu/assets/images/acceuil/IMG_3120.JPG" alt="" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat"><
 
 							<!-- LAYER NR. 1 -->
 							<div class="tp-caption lightgrey_divider skewfromrightshort customout"
@@ -294,14 +294,14 @@
 			<!-- CALLOUT -->
 			<div class="bs-callout margin-top text-center styleBackground noradius">
 				<h3>Bienvenu dans l'application de <strong>Sharme Canada</strong> Nous sommes la pour <strong>Vous</strong>.
-				<a href="<?=$this->racineWeb ?>connexion/signup" class="btn btn-primary btn-lg">S'inscrire</a></h3>
+				<a href="<?=$this->racineWebFront ?>connexion/signup" class="btn btn-primary btn-lg">S'inscrire</a></h3>
 			</div>
 			<!-- /CALLOUT -->
 
 
 
 			<!-- PARALLAX -->
-			<section class="parallax delayed margin-footer" data-stellar-background-ratio="0.7" style="background-image: url(<?=$this->racineWeb ?>Contenu/assets/images/demo/parallax.jpg);">
+			<section class="parallax delayed margin-footer" data-stellar-background-ratio="0.7" style="background-image: url(<?=$this->racineWebFront ?>Contenu/assets/images/demo/parallax.jpg);">
 				<span class="overlay"></span>
 
 				<div class="container">
@@ -320,7 +320,7 @@
 								<small><em> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc.</em></small>
 							</p>
 
-							<a class="btn btn-primary btn-lg" href="<?=$this->racineWeb ?>about">En savoir plus</a>
+							<a class="btn btn-primary btn-lg" href="<?=$this->racineWebFront ?>about">En savoir plus</a>
 						</div>
 
 						<!-- right image

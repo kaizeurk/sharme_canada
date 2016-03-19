@@ -14,7 +14,7 @@ abstract class ControllerPersonnalise extends Controller
      * @param type $donneesView Données dynamiques
      * @param type $action Action associée à la view
      */
-    protected function generateView($donneesView = array(), $action = null)
+    protected function generateView($donneesView = array(), $action = null, $paramAction = true)
     {
         $member = null;
         $nbArticlesPanier = 0;
@@ -26,7 +26,7 @@ abstract class ControllerPersonnalise extends Controller
             
         }
         // ... et on les ajoute aux données de la view
-        parent::generateView($donneesView + array('member' => $member), $action);
+        parent::generateView($donneesView + array('member' => $member), $action,true);
     }
 
 }
