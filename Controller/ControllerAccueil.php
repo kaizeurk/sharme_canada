@@ -20,6 +20,10 @@ class ControllerAccueil extends ControllerPersonnalise {
      */
     public function index() 
     {
+    	if(!($this->request->getSession()->existAttribut('role')))
+    	{
+    		$this->request->getSession()->setAttribut('role','ANONYMOUS');
+    	}
         $this->generateView();
     }
 

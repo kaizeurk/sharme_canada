@@ -55,7 +55,7 @@
 
 				<!-- PHONE/EMAIL -->
 				<span class="quick-contact pull-left">
-					<i class="fa fa-phone"></i> + 1 514-531-3057
+					<i class="fa fa-phone">+ 1 514-531-3057</i> 
 				</span>
 				<!-- /PHONE/EMAIL -->
 
@@ -83,7 +83,7 @@
 				       <?php if (!isset($member)): ?>
 				<!-- Se connecter -->
 				<div class="pull-right nav signin-dd">
-					<a id="quick_sign_in" href="<?=$racineWebFront ?>connexion/" data-toggle="dropdown"><i class="fa fa-users"></i><span class="hidden-xs"><?php echo $lang['MENU_CONNEXION']['fr'] ?></span></a>
+					<a id="quick_sign_in" href="<?=$racineWebFront ?>connexion/" data-toggle="dropdown"><i class="fa fa-users"></i><span class="hidden-xs"><?php echo $lang['MENU_CONNEXION'][$langId] ?></span></a>
 					<div class="dropdown-menu" role="menu" aria-labelledby="quick_sign_in">
 
 						<h4><a href="<?=$racineWebFront ?>connexion/"><?php echo $lang['MENU_CONNEXION'][$langId] ?></a></h4>
@@ -126,7 +126,7 @@
 				</div>
 				<!-- /Se déconnecter -->
 				       <?php else: ?>
-                           <div class="pull-right nav">Bienvenu, <a id="info_member" href="<?=$racineWebFront ?>member/" data-toggle="dropdown"><?= $this->clean($member['firstname']) ?></a>
+                           <div class="pull-right nav"><?=$lang['WELCOME'][$langId] ?>, <a id="info_member" href="<?=$racineWebFront ?>member/" data-toggle="dropdown"><?= $this->clean($member['firstname']) ?></a>
                               <div class="dropdown-menu" role="menu" aria-labelledby="info_member">
 						         <h4><a href="<?=$racineWebFront ?>member/">Informations personnelles</a></h4>
                               	 
