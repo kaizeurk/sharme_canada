@@ -29,11 +29,13 @@
 							<form class="white-row" method="post" action="inscrire">
 
 								<!-- alert failed -->
-								<div class="alert alert-danger">
-									<i class="fa fa-frown-o"></i> 
-									<strong>Password</strong> do not match!
-								</div>
-
+								<?php if (isset($msgBad)) : ?>
+									<div class="alert alert-danger">
+								        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+										<i class="fa fa-frown-o"></i> 
+									<strong>Something</strong> do not match!
+									</div>
+								<?php endif; ?>
 								<div class="row">
 									<div class="form-group">
 										<div class="col-md-12">
@@ -135,7 +137,7 @@
 							<div class="white-row">
 								<h4>Contact Customer Support</h4>
 								<p>
-									If you're looking for more help or have a question to ask, please <a href="contact-us.html">contact us</a>.
+									If you're looking for more help or have a question to ask, please <a href="<?= $this->racineWebFront ?>contact">contact us</a>.
 								</p>
 							</div>
 

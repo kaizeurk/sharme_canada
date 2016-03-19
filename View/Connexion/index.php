@@ -31,13 +31,17 @@
 
 							<h2>Sign <strong>In</strong></h2>
 
-							<form class="white-row" method="post" action="connexion/connecter">
+							<form class="white-row" method="post" action="connecter">
 
 								<!-- alert failed -->
-								<div class="alert alert-danger">
-									<i class="fa fa-frown-o"></i> 
-									Wrong <strong>E-mail Address</strong> or <strong>Password</strong>!
-								</div>
+								<?php if (isset($msgErreurCPwd)) : ?>
+									<div class="alert alert-danger">
+								        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+										<i class="fa fa-frown-o"></i> 
+										Wrong <strong>E-mail Address</strong> or <strong>Password</strong>!
+									</div>
+								<?php endif; ?>
+																
 
 								<div class="row">
 									<div class="col-md-12">
@@ -64,7 +68,7 @@
 										</span>
 									</div>
 									<div class="col-md-6">
-										<input type="submit" value="Sign In" class="btn btn-primary pull-right" data-loading-text="Loading...">
+										<input type="submit" name="courriel" value="Sign In" class="btn btn-primary pull-right" data-loading-text="Loading...">
 									</div>
 								</div>
 
@@ -85,21 +89,27 @@
 								</p>
 
 								<!-- alert success -->
-								<div class="alert alert-success">
-									<i class="fa fa-check-circle"></i> 
-									<strong>New Password Sent!</strong> Check your E-mail Address!
-								</div>
+								<?php if (isset($msgGod)) : ?>
+									<div class="alert alert-success">
+								        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>								        
+										<i class="fa fa-check-circle"></i> 
+										<strong>New Password Sent!</strong> Check your E-mail Address!
+									</div>
+								<?php endif; ?>
 
 								<!-- alert failed -->
-								<div class="alert alert-danger">
-									<i class="fa fa-frown-o"></i> 
-									<strong>E-mail Address</strong> not found!
-								</div>
+								<?php if (isset($msgBad)) : ?>
+									<div class="alert alert-danger">
+								        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+										<i class="fa fa-frown-o"></i> 
+										<strong>E-mail Address</strong> not found!
+									</div>
+								<?php endif; ?>
 
 								<!-- password form -->
 								<label>Type your E-mail Address</label>
-								<form class="input-group" method="post" action="#">
-									<input type="text" class="form-control" name="s" id="s" value="" placeholder="E-mail Address" />
+								<form class="input-group" method="post" action="resetpwd">
+									<input type="text" class="form-control" name="courriel" id="s" value="" placeholder="E-mail Address" />
 									<span class="input-group-btn">
 										<button class="btn btn-primary">SEND</button>
 									</span>

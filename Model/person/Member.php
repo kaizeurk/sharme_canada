@@ -438,6 +438,19 @@ class Member extends Model
     }
 
     /**
+     * Vérifie q'un member exist dans la BD
+     * 
+     * @param type $courriel
+     * @return type
+     */
+    public function memberExist($courriel)
+    {
+        $sql = "select MEMBER_ID from T_MEMBER where EMAIL=?";
+        $member = $this->executeRequest($sql, array($courriel));
+        return ($member->rowCount() == 1);
+    }
+
+    /**
      * Renvoie les infos sur un member
      * 
      * @param type $courriel

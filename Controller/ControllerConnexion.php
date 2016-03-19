@@ -38,12 +38,12 @@ class ControllerConnexion extends Controller
             }
             else
             {
-                $this->generateView(array('msgErreur' => 'Member inconnu'),"index");
+                $this->generateErrorView(array('msgErreurCPwd' =>'', 'msgErreur' => 'Membre inconnu'),"index");
             }
         }
         else
         {
-        	$this->generateView(array('msgErreur' => 'Action impossible : courriel ou mot de passe non défin'),"index",false);        	
+        	$this->generateErrorView(array('msgErreur' => 'Action impossible : courriel ou mot de passe non défin'),"index",false);        	
            // throw new Exception("Action impossible : courriel ou mot de passe non défini");
         }
     }
@@ -88,7 +88,10 @@ class ControllerConnexion extends Controller
             $this->accueillirMember($email, $mdp);
         }
         else
-            throw new Exception("Action impossible : tous les paramètres ne sont pas définis");
+        {
+        	$this->generateErrorView(array('msgBad' =>'', ),"signup");
+        }
+        	
     }
 
     /**
@@ -103,6 +106,32 @@ class ControllerConnexion extends Controller
         $this->request->getSession()->setAttribut("member", $member);
         $this->request->getSession()->setAttribut("role", "MEMBER");
         $this->redirect("accueil");
+    }
+    
+    /**
+     * 
+     * @throws Exception
+     */
+    public function resetpwd()
+    {
+        if ($this->request->existParameter("courriel")) 
+        {
+            $email = $this->request->getParameter("courriel");
+
+            if($this->member->memberExist($email))
+            {
+                $this->generateErrorView(array('msgGod' =>'', ),"index");
+            }
+            else 
+            {
+                $this->generateErrorView(array('msgBad' =>'', ),"index");
+            }
+        }
+        else
+        {
+        	$this->generateErrorView(array('msgBad' =>'', ),"index");
+        }
+            //throw new Exception("Action impossible : tous les paramètres ne sont pas définis");
     }
     
 

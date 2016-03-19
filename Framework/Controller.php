@@ -82,6 +82,29 @@ abstract class Controller
         $view = new View($actionView, $controllerView);
         $view->generate($donneesView);
     }
+    /**
+     * Génère la view associée au contrôleur courant
+     * 
+     * @param array $donneesView Données nécessaires pour la génération de la view
+     * @param string $action Action associée à la view (permet à un contrôleur de générer une view pour une action spécifique)
+     */
+    protected function generateErrorView($donneesView = array(), $action = null)
+    {
+        // Utilisation de l'action actuelle par défaut
+        $actionView = $this->action;
+        	
+        if ($action != null) 
+        {
+            // Utilisation de l'action passée en paramètre
+            $actionView = $action;
+        }
+        // Utilisation du nom du contrôleur actuel
+        $classeController = get_class($this);
+        $controllerView = str_replace("Controller", "", $classeController);
+        // Instanciation et génération de la view
+        $view = new View($actionView, $controllerView);
+        $view->generate($donneesView);
+    }
 
     /**
      * Effectue une redirection vers un contrôleur et une action spécifiques
