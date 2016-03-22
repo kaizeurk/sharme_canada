@@ -10,6 +10,8 @@ require_once 'Model/person/Member.php';
  */
 class ControllerConnexion extends Controller
 {
+	const ERROR_MSG = -1;
+	const GOD_MSG   = 1;
     /**
      * 
      * @var Member
@@ -109,7 +111,7 @@ class ControllerConnexion extends Controller
     }
     
     /**
-     * 
+     * Ici que l'on gere le le reset pwd
      * @throws Exception
      */
     public function resetpwd()
@@ -120,16 +122,16 @@ class ControllerConnexion extends Controller
 
             if($this->member->memberExist($email))
             {
-                $this->generateErrorView(array('msgGod' =>'', ),"index");
+                $this->generateErrorView(array('msgGod' =>self::GOD_MSG, ),"index");
             }
             else 
             {
-                $this->generateErrorView(array('msgBad' =>'', ),"index");
+                $this->generateErrorView(array('msgBad' =>self::ERROR_MSG, ),"index");
             }
         }
         else
         {
-        	$this->generateErrorView(array('msgBad' =>'', ),"index");
+        	$this->generateErrorView(array('msgBad' =>self::ERROR_MSG, ),"index");
         }
             //throw new Exception("Action impossible : tous les paramètres ne sont pas définis");
     }
