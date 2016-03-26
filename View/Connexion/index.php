@@ -68,7 +68,7 @@
 								</span>
 							</div>
 							<div class="col-md-6">
-								<input type="submit" name="courriel" value="Sign In" class="btn btn-primary pull-right" data-loading-text="Loading...">
+								<input type="submit" value="Sign In" class="btn btn-primary pull-right" data-loading-text="Loading...">
 							</div>
 						</div>
 
