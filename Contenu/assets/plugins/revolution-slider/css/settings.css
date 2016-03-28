@@ -552,6 +552,17 @@ font-family:"Open Sans";
 background-color:transparent;
 }
 
+.tp-caption.thinheadline_white {
+position:absolute;
+color:rgb(253,253,253);
+text-shadow:none;
+font-weight:300;
+font-size:30px;
+line-height:30px;
+font-family:"Open Sans";
+background-color:transparent;
+}
+
 .tp-caption.thintext_dark {
 position:absolute;
 color:rgba(0,0,0,0.85);
@@ -685,6 +696,21 @@ border-width:0px;
 border-color:rgb(255, 214, 88);
 border-style:none;
 }
+.tp-caption.large_bold_grey_ligth {
+font-size:60px;
+line-height:60px;
+font-weight:800;
+font-family:"Open Sans";
+color:rgb(200, 200, 200);
+text-decoration:none;
+background-color:transparent;
+text-shadow:none;
+margin:0px;
+padding:1px 4px 0px;
+border-width:0px;
+border-color:rgb(255, 214, 88);
+border-style:none;
+}
 
 .tp-caption.medium_thin_grey {
 font-size:34px;
@@ -708,6 +734,21 @@ line-height:26px;
 font-weight:300;
 font-family:"Open Sans";
 color:rgb(117, 117, 117);
+text-decoration:none;
+background-color:transparent;
+padding:1px 4px 0px;
+text-shadow:none;
+margin:0px;
+border-width:0px;
+border-color:rgb(255, 214, 88);
+border-style:none;
+}
+.tp-caption.small_thin_white {
+font-size:18px;
+line-height:26px;
+font-weight:300;
+font-family:"Open Sans";
+color:rgb(255, 255, 255);
 text-decoration:none;
 background-color:transparent;
 padding:1px 4px 0px;

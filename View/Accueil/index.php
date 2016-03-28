@@ -7,7 +7,7 @@
 						<li data-transition="fade" data-slotamount="7" data-masterspeed="1500">
 
 							<!-- COVER IMAGE -->
-							<img src="<?=$this->racineWebFront ?>Contenu/assets/images/acceuil/IMG_3120.JPG" alt="" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat"><
+							<img src="<?=$this->racineWebFront ?>Contenu/assets/images/acceuil/IMG_2767.JPG" alt="" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat"><
 
 							<!-- LAYER NR. 1 -->
 							<div class="tp-caption lightgrey_divider skewfromrightshort customout"
@@ -25,7 +25,8 @@
 
 
 							<!-- LAYER NR. 3 -->
-							<div class="tp-caption large_bold_grey skewfromrightshort customout"
+							<!-- <div class="tp-caption large_bold_grey skewfromrightshort customout" -->
+							<div class="tp-caption large_bold_grey_ligth skewfromrightshort customout"
 								data-x="80"
 								data-y="66"
 								data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
@@ -39,7 +40,7 @@
 							</div>
 
 							<!-- LAYER NR. 4 -->
-							<div class="tp-caption large_bold_grey skewfromleftshort customout"
+							<div class="tp-caption large_bold_grey_ligth skewfromleftshort customout"
 								data-x="80"
 								data-y="122"
 								data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
@@ -53,7 +54,9 @@
 							</div>
 
 							<!-- LAYER NR. 5 -->
-							<div class="tp-caption small_thin_grey customin customout"
+							<!--<div class="tp-caption small_thin_grey customin customout" 
+							<div class="tp-caption thinheadline_dark customin customout"-->
+							<div class="tp-caption small_light_white customin customout"
 								data-x="80"
 								data-y="230"
 								data-customin="x:0;y:100;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:1;scaleY:3;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:0% 0%;"
@@ -65,10 +68,10 @@
 								data-endeasing="Power4.easeIn"
 								data-captionhidden="off"
 								style="z-index: 8">
-								l'alliance dans une réacréation bien mérité<br />
+								l'alliance dans une récréation bien méritée<br />
 								dans un cadre de franternité nous partageons<br />
 								un petit BBQ! <strong>Vive L'union et la fraternité!</strong><br />
-								<a href="index-more.html">Read more...</a>
+								<a href="<?=$this->racineWebFront ?>about">Read more...</a>
 							</div>
 
 							<!-- LAYER NR. 6 -->
@@ -87,16 +90,16 @@
 
 							<!-- LAYER NR. 7 -->
 							<div class="tp-caption medium_bg_darkblue skewfromleftshort customout"
-								data-x="80" data-hoffset="-90"
+								data-x="80" data-hoffset="-120"
 								data-y="410"
 								data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
 								data-speed="500"
-								data-start="1650"
+								data-start="1600"
 								data-easing="Back.easeOut"
 								data-endspeed="500"
 								data-endeasing="Power4.easeIn"
 								data-captionhidden="off"
-								style="z-index: 11">Liens de soudent
+								style="z-index: 11">Les liens qui soudent
 							</div>
 
 							<div class="tp-caption medium_bold_orange skewfromleftshort customout start font300"
@@ -123,7 +126,7 @@
 								data-endspeed="500"
 								data-endeasing="Power4.easeIn"
 								data-captionhidden="off"
-								style="z-index: 21">La percévérance sont avec nous!
+								style="z-index: 21">La percévérance est avec nous!
 							</div>
 
 						</li>
@@ -132,7 +135,7 @@
 						<li data-transition="3dcurtain-vertical" data-slotamount="14"  data-masterspeed="300" data-delay="10000">
 
 							<!-- COVER IMAGE -->
-							<img src="<?=$this->racineWebFront ?>Contenu/assets/images/acceuil/IMG_3011.JPG" alt="" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat" />
+							<img  src="<?=$this->racineWebFront ?>Contenu/assets/images/acceuil/IMG_3011.JPG" alt="" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat" />
 
 							<!--<div class="tp-caption lft boxshadow"
 								data-x="70"
@@ -143,7 +146,7 @@
 								<iframe src='http://player.vimeo.com/video/8408210?title=0&amp;byline=0&amp;portrait=0;api=1' width='640' height='360' style='width:640px; height:360px;'></iframe>
 							</div>-->
 
-							<div class="tp-caption sft large_bold_grey"
+							<div class="tp-caption sft large_bold_white_25"
 								data-x="750"
 								data-y="70"
 								data-speed="300"
@@ -159,15 +162,15 @@
 								data-easing="easeOutExpo">Ensemble le Quebec
 							</div>
 
-							<div class="tp-caption lfb thinheadline_dark"
+							<div class="tp-caption lfb thinheadline_white"
 								data-x="750"
 								data-y="210"
 								data-speed="300"
 								data-start="1400"
-								data-easing="easeOutExpo">Vous n'etes plus seul
+								data-easing="easeOutExpo">Vous n'êtes plus seul
 							</div>
 
-							<div class="tp-caption lfb thinheadline_dark"
+							<div class="tp-caption lfb thinheadline_white"
 								data-x="750"
 								data-y="244"
 								data-speed="300"
@@ -175,7 +178,8 @@
 								data-easing="easeOutExpo">Nous sommes la pour vous
 							</div>
 
-							<div class="tp-caption lfb thinheadline_dark"
+							<!-- div class="tp-caption lfb thinheadline_dark" -->
+							<div class="tp-caption lfb thinheadline_white"
 								data-x="750"
 								data-y="278"
 								data-speed="300"
@@ -189,7 +193,7 @@
 						<li data-transition="incube-horizontal" data-slotamount="5" data-masterspeed="700" >
 
 							<!-- COVER IMAGE -->
-							<img src="<?=$this->racineWebFront ?>Contenu/assets/images/acceuil/IMG_2767.JPG" alt="" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+							<img  src="<?=$this->racineWebFront ?>Contenu/assets/images/acceuil/IMG_3120.JPG" alt="" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
 
 							<div class="tp-caption large_text sft"
 								data-x="center"
@@ -234,9 +238,9 @@
 			<section class="container text-center">
 				<h1 class="text-center">
 					<strong>Bienvenu</strong> dans le site de SHARME CANADA
-					<span class="subtitle">COME ON, DON'T BE SHY! TODAY WE DON'T BITE!</span>
+					<span class="subtitle">VOUS IMMIGREZ AU CANADA ET VOUS N'AVEZ PAS DE REPERE?</span>
 				</h1>
-				<p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus nulla, commodo a sodales sed, dignissim pretium nunc. Nam et lacus neque. Ut enim massa, sodales tempor convallis et, iaculis ac massa.</p>
+				<p class="lead">Vous êtes au bonne endroit, vos questions, vos préoccupations nous allons y répondre!!!</p>
 			</section>
 
 
