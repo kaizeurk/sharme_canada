@@ -546,6 +546,42 @@ class Member extends Model
     	//a faire pour convertir ou encoder
     	$this->setPassword($mdp);
     }
+    
+    public function install()
+    {
+       $sql = 	"DROP DATABASE IF EXISTS db_sharme";
+       $this->executeRequest($sql);
+       $sql = 	"CREATE DATABASE db_sharme";
+       $this->executeRequest($sql);
+       
+       $sql = 	"CREATE TABLE IF NOT EXISTS `T_MEMBER` (
+  `MEMBER_ID` int(11) NOT NULL,
+  `FIRSTNAME` varchar(100) NOT NULL,
+  `LASTNAME` varchar(100) NOT NULL,
+  `ADDRESS` varchar(200) DEFAULT NULL,
+  `CODE_POSTAL` varchar(20) DEFAULT NULL,
+  `TOWN` varchar(200) DEFAULT NULL,
+  `PASSWORD` varchar(225) DEFAULT NULL,
+  `PHONE_NUMBER` varchar(20) DEFAULT NULL,
+  `EMAIL` varchar(100) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8";
+       $this->executeRequest($sql);
+       $sql = 	"
+           ALTER TABLE `T_MEMBER`
+             ADD PRIMARY KEY (`MEMBER_ID`),
+             ADD UNIQUE KEY `EMAIL` (`EMAIL`)";
+       $this->executeRequest($sql);
+       $sql = 	"
+          ALTER TABLE `T_MEMBER`
+          MODIFY `MEMBER_ID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4";
+       $this->executeRequest($sql);
+       $sql = 	"
+         INSERT INTO `T_MEMBER` (`MEMBER_ID`, `FIRSTNAME`, `LASTNAME`, `ADDRESS`, `CODE_POSTAL`, `TOWN`, `PASSWORD`, `PHONE_NUMBER`, `EMAIL`) VALUES
+         (1, 'sharme', 'canada', '123 rue produits produit des champs', 'x8r 9s8', 'ville de montagne', '123456', '123-456-7890', 'sharme@gmail.com'),
+         (2, 'admin', 'admin', '123 rue produits produit des champs', 'x8r 9s8', 'ville de montagne', '123456', '123-456-7890', 'admin@admin.org'),
+         (3, 'sozer', 'kaizeurk', NULL, NULL, NULL, '123456', NULL, 'kaizeurk@gmail.com')";
+       $this->executeRequest($sql);
+    }
 }
 
 ?>

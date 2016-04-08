@@ -135,7 +135,7 @@
 						</p>
 
 						<!-- alert success -->
-						<?php if (isset($msgGod) && $$msgGod = ControllerConnexion::GOD_MSG) : ?>
+						<?php if (isset($msgGod) && $msgGod = ControllerConnexion::GOD_MSG) : ?>
 							<div class="alert alert-success">
 						        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>								        
 								<i class="fa fa-check-circle"></i> 

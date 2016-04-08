@@ -204,10 +204,6 @@
 									<li><a href="index-more.html">More...</a></li>
 								</ul>
 							</li>
-							<li class="dropdown mega-menu-item mega-menu-two-columns">
-                            <a class="dropdown-toggle" href="<?=$racineWebFront ?>about">Apropos<i class="fa fa-angle-down"></i></a>
-
-							</li>
 							<li class="dropdown mega-menu-item mega-menu-fullwidth">
 								<a class="dropdown-toggle" href="#">
 									Activit&#233;s<i class="fa fa-angle-down"></i>
@@ -274,11 +270,6 @@
 									</li>
 								</ul>
 							</li>
-							<li class="dropdown">
-								<a class="dropdown-toggle" href="avis-juridic.html">
-									Avis legal<i class="fa fa-angle-down"></i>
-								</a>
-							</li>
 
 							<li class="dropdown">
 								<a class="dropdown-toggle" href="#">
@@ -292,6 +283,15 @@
 							<li class="dropdown">
 					            <a href="{{ path('sharmecanadaplatform_advice') }}">Conseils<i class="fa fa-angle-down"></i></a>
 
+							</li>
+							<li class="dropdown mega-menu-item mega-menu-two-columns">
+                                <a class="dropdown-toggle" href="<?=$racineWebFront ?>about">Apropos<i class="fa fa-angle-down"></i></a>
+
+							</li>
+							<li class="dropdown">
+								<a class="dropdown-toggle" href="avis-juridic.html">
+									Avis legal<i class="fa fa-angle-down"></i>
+								</a>
 							</li>
 							<li class="dropdown">
 					            <a href="<?=$racineWebFront ?>contact">Contact<i class="fa fa-angle-down"></i></a>

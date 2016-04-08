@@ -33,7 +33,7 @@
 									<div class="alert alert-danger">
 								        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
 										<i class="fa fa-frown-o"></i> 
-									<strong>Something</strong> do not match!
+									    <strong>Something</strong> do not match! <?=$msgBad ?>
 									</div>
 								<?php endif; ?>
 								<div class="row">

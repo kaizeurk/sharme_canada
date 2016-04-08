@@ -12,6 +12,7 @@ class ControllerConnexion extends Controller
 {
 	const ERROR_MSG = -1;
 	const GOD_MSG   = 1;
+	
     /**
      * 
      * @var Member
@@ -30,6 +31,7 @@ class ControllerConnexion extends Controller
 
     public function connecter()
     {
+        //$this->member->install();
     	if ($this->request->existParameter("courriel") && $this->request->existParameter("mdp")) 
     	{
             $courriel = $this->request->getParameter("courriel");
@@ -78,16 +80,23 @@ class ControllerConnexion extends Controller
         		$this->request->existParameter("courriel") &&
                 $this->request->existParameter("mdp")) 
         {
-            $lastname = $this->request->getParameter("nom");
+            $lastname  = $this->request->getParameter("nom");
             $firstname = $this->request->getParameter("prenom");
-            $address = ($this->request->existParameter("address"))?$this->request->getParameter("address"):null;
-            $town = ($this->request->existParameter("ville"))?$this->request->getParameter("ville"):null;
+            $address   = ($this->request->existParameter("address"))?$this->request->getParameter("address"):null;
+            $town      = ($this->request->existParameter("ville"))?$this->request->getParameter("ville"):null;
             $codepostal = ($this->request->existParameter("codePostal"))?$this->request->getParameter("codePostal"):null;
             $email = $this->request->getParameter("courriel");
             $mdp = $this->request->getParameter("mdp");
+        	if($this->member->memberExist($email))
+        	{
+        	   $this->generateErrorView(array('msgBad' =>'Ce courriel existe deja', ),"signup");
+        	}
+        	else
+        	{
+               $this->member->addMember($lastname, $firstname, $address, $town, $codepostal, $email, $mdp);
+               $this->accueillirMember($email, $mdp);
+        	}
 
-            $this->member->addMember($lastname, $firstname, $address, $town, $codepostal, $email, $mdp);
-            $this->accueillirMember($email, $mdp);
         }
         else
         {
