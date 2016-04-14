@@ -525,6 +525,13 @@ class Member extends Model
                 array($this->getLastName(), $this->getFirstName(), $this->getAddress(),$this->getTown(),$this->getPostalCode(), $this->getEmailMembername(), $this->getPassword(), $id));
     }
     
+    public function updateForgottenPassword($email, $mdp)
+    {
+    	$this->setPassword($mdp);
+    	$sql = "update T_MEMBER set PASSWORD=? where EMAIL=?";
+    	$this->executeRequest($sql, array($mdp, $email));
+    }
+    
     /**
      * 
      * @param unknown $lastname

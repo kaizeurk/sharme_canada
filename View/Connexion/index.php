@@ -83,7 +83,7 @@
 
 					<h2><strong>Reset Password</strong></h2>
 
-					<form class="white-row" method="post" action="#">	
+					<form class="white-row" method="post" action="changepwd">	
 						<div class="row">
 							<div class="form-group">
 					           <div class="col-md-12">
@@ -96,7 +96,7 @@
 							<div class="form-group">
 					            <div class="col-md-12">
 									<label>Re-enter Password</label>
-									<input name="mdp" type="password" required class="form-control">
+									<input name="mdp1" type="password" required class="form-control">
 								</div>
 							</div>
 						</div>
