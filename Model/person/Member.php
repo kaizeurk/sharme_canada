@@ -107,6 +107,10 @@ class Member extends Model
 	# Default constructor.
 	public function __construct()
 	{
+	   $this->setTableDef();
+	   $this->setPrimaryKey();
+	   $this->setFieldsList();
+	   $this->setMandatoryFields();
 	}
 
 	###########
@@ -508,14 +512,14 @@ class Member extends Model
     /**
      * Modifie un member existant
      * 
-     * @param unknown $lastname
-     * @param unknown $firstname
-     * @param unknown $address
-     * @param unknown $town
-     * @param unknown $codepostal
-     * @param unknown $email
-     * @param unknown $mdp
-     * @param unknown $id
+     * @param string  $lastname
+     * @param string  $firstname
+     * @param string  $address
+     * @param string  $town
+     * @param string  $codepostal
+     * @param string  $email
+     * @param string  $mdp
+     * @param integer $id
      */
     public function setdataMember($lastname, $firstname, $address, $town, $codepostal, $email, $mdp, $id)
     {
@@ -547,6 +551,90 @@ class Member extends Model
     	$this->setPassword($mdp);
     }
     
+    /**
+     * 
+     * @see Model::getTableDef()
+     */
+    public function getTableDef()
+    {
+       return $this->tableDef;
+    }
+
+    /**
+     *
+     * @see Model::getTableDef()
+     */
+    protected function setTableDef()
+    {
+    	$this->tableDef = "T_MEMBER";
+    }
+    
+    /**
+     * 
+     * @see Model::getMandatoryFields()
+     */
+    public function getMandatoryFields()
+    {
+    	return $this->mandatoryFields;
+    }
+    
+    /**
+     * 
+     * @see Model::getPrimaryKey()
+     */
+    public function getPrimaryKey()
+    {
+    	return $this->primaryKeys;
+    }
+
+    /**
+     *
+     * @see Model::getPrimaryKey()
+     */
+    protected  function setPrimaryKey()
+    {
+    	$this->primaryKeys = "MEMBER_ID";
+    }
+    
+    /**
+     * 
+     * @see Model::getFieldsList()
+     */
+    public function getFieldsList()
+    {
+    	return $this->fieldsList;
+    }
+    
+    /**
+     * 
+     * @see Model::setFieldsList()
+     */
+    protected function setFieldsList()
+    {
+    	$this->fieldsList[] = "MEMBER_ID";
+    	$this->fieldsList[] = "FIRSTNAME";
+    	$this->fieldsList[] = "LASTNAME";
+    	$this->fieldsList[] = "ADDRESS";
+    	$this->fieldsList[] = "CODE_POSTAL";
+    	$this->fieldsList[] = "TOWN";
+    	$this->fieldsList[] = "PHONE_NUMBER";
+    	$this->fieldsList[] = "EMAIL";
+    	$this->fieldsList[] = "PASSWORD";
+    	$this->fieldsList[] = "CODE_POSTAL";
+    }
+    
+    /**
+     * 
+     * @see Model::setMandatoryFields()
+     */
+    protected function setMandatoryFields()
+    {
+	   $this->mandatoryFields[] = "EMAIL";
+	   $this->mandatoryFields[] = "PASSWORD";
+	   $this->mandatoryFields[] = "CODE_POSTAL";
+    	
+    }
+    
     public function install()
     {
        $sql = 	"DROP DATABASE IF EXISTS db_sharme";
@@ -554,17 +642,17 @@ class Member extends Model
        $sql = 	"CREATE DATABASE db_sharme";
        $this->executeRequest($sql);
        
-       $sql = 	"CREATE TABLE IF NOT EXISTS `T_MEMBER` (
-  `MEMBER_ID` int(11) NOT NULL,
-  `FIRSTNAME` varchar(100) NOT NULL,
-  `LASTNAME` varchar(100) NOT NULL,
-  `ADDRESS` varchar(200) DEFAULT NULL,
-  `CODE_POSTAL` varchar(20) DEFAULT NULL,
-  `TOWN` varchar(200) DEFAULT NULL,
-  `PASSWORD` varchar(225) DEFAULT NULL,
-  `PHONE_NUMBER` varchar(20) DEFAULT NULL,
-  `EMAIL` varchar(100) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8";
+       $sql = 	
+       "CREATE TABLE IF NOT EXISTS `T_MEMBER` (
+       `MEMBER_ID` int(11) NOT NULL,
+       `FIRSTNAME` varchar(100) NOT NULL,
+       `LASTNAME` varchar(100) NOT NULL,
+       `ADDRESS` varchar(200) DEFAULT NULL,
+       `CODE_POSTAL` varchar(20) DEFAULT NULL,
+       `TOWN` varchar(200) DEFAULT NULL,
+       `PASSWORD` varchar(225) DEFAULT NULL,
+       `PHONE_NUMBER` varchar(20) DEFAULT NULL,
+       `EMAIL` varchar(100) NOT NULL ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8";
        $this->executeRequest($sql);
        $sql = 	"
            ALTER TABLE `T_MEMBER`

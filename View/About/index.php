@@ -32,7 +32,7 @@
 					    L'association a été créée en vue d 'encadrer les efforts entrepris par les familles  immigrantes du Québec,  de répondre à leurs besoins d'intégration et les accompagner dans leurs  projets de développement social .La promotion des idées ,valeurs et des comportements de volontariat ,de bienfaisance et de solidarité est l 'un des fondements de notre participation à la reconstruction des valeurs morales, spirituel et intellectuels de nation en vue d'aboutir à une famille unie et à une nation utile
 					</p>
 										
-					<h2>Projet de parrainage de nouveaux arrivants</h2>
+					<h2 id = "projetId">Projet de parrainage de nouveaux arrivants</h2>
 					<p>
 					    Après plusieurs années d'action sociale, l'Association pour la protection de la famille au Canda a décidé d'accorder la priorité aux nouveaux arrivants et ce en mettant en œuvre le projet intitulé :«Le parrainage de la famille immigrante au sein de sa famille ».
 					</p>

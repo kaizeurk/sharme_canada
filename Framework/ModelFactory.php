@@ -8,7 +8,7 @@ require_once 'DbConnect.php';
  *
  * @author Baptiste Pesquet
  */
-abstract class Model
+abstract class ModelFactory
 {
 	
     /** Objet PDO d'accès à la BD 
@@ -19,33 +19,24 @@ abstract class Model
     
     /**
      * 
-     * @var string
-     */
-    protected $tableDef;
-    
-    /**
-     * this contains all madatory needed to fetch correcte date in database
-     * @var array
-     */
-    protected $mandatoryFields;
-    
-    /**
-     * this is to get only one record in database
-     * @var string
-     */
-    protected $primaryKeys;
-    
-    /**
-     * 
-     * @var string
-     */
-    protected $fieldsList;
-    
-    /**
-     * 
-     * @var stdClass
+     * @var Model
      */
     public $record;
+
+    /**
+     *
+     * @var array $recordFields
+     */
+    private $recordFields;
+    
+    /**
+     * 
+     * @param Model $model
+     */
+    public function __construct($model = null)
+    {
+    	$this->record = $model;
+    }
 
     /**
      * Exécute une requête SQL
@@ -88,59 +79,60 @@ abstract class Model
         return self::$bdd;
     }
     
-    /**
-     * this return de name of table to in database
-     * @return string $tableDef
-     */
-    abstract public function getTableDef();
+    public function getRecord(array $fields = null)
+    {
+    	try 
+    	{
+    	   	/* @var $fieldsInModel Model */
+    		$fieldsInModel = $this->record->getFieldsList();
+            $sql =  'SELECT ';
+    		if(!isset($fieldsInModel))
+    		{
+    			throw new Exception('Cannot fill empty Models'.$this->record->getTableDef());
+    		}
+    		
+    		if(!isset($fields))
+    	   	{
+    	   		throw new Exception('Cannot find empty property in '.__FUNCTION__.' in '.$this->record->getTableDef()); 
+    	   	}
+    	   	
+    	   	foreach ($fields as $field)
+    	   	{
+    	   		if(!in_array($field, $fieldsInModel))
+    	   		{
+    			   throw new Exception('This field '.$field.' do not exist in '.$this->record->getTableDef());
+    	   		}
+    	   		else
+    	   		{
+    	   			$sql .= $field.', ';
+    	   		}
+    	   	}
+    	   	$sql .= '1 from '.$this->record->getTableDef();
+    	} 
+    	catch (Exception $e) 
+    	{
+    		echo 'Exception reçue : ',  $e->getMessage(), "\n"; 
+    	}
+    }
     
-    /**
-     * this return de name of table to in database
-     */
-    abstract protected function setTableDef();
-    
-    /**
-     * this is to get all mandatorory fields needed
-     * @return array
-     */
-    abstract public function getMandatoryFields();
-    
-    /**
-     * 
-     * @return string $primaryKey
-     */
-    abstract public function getPrimaryKey();
-    
-    /**
-     * 
-     * @return string $primaryKey
-     */
-    abstract protected  function setPrimaryKey();
-    
-    /**
-     * 
-     * @return string $fieldsList
-     */
-    abstract public function getFieldsList();
-    
-    /**
-     * 
-     */
-    abstract protected function setFieldsList();
-
-    /**
-     *
-     */
-    abstract protected function setMandatoryFields();
-    
-    /**
-     * @return Model
-     */
-    public function getRecord()
+    public function  updateRecord()
     {
     	
     }
     
+    public function insertRecord()
+    {
+    	
+    }
     
+    public function findModelBy()
+    {
+    	
+    }
+
+    public function findModelById( $id = null )
+    {
+    	 
+    }
 
 }
