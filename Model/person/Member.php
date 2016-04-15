@@ -635,6 +635,13 @@ class Member extends Model
     	
     }
     
+    public function updateForgottenPassword($email, $mdp)
+    {
+    	$this->setPassword($mdp);
+    	$sql = "update T_MEMBER set PASSWORD=? where EMAIL=?";
+    	$this->executeRequest($sql, array($mdp, $email));
+    }
+    
     public function install()
     {
        $sql = 	"DROP DATABASE IF EXISTS db_sharme";
