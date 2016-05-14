@@ -2,13 +2,12 @@
 require_once 'DbConnect.php';
 
 /**
- * Classe abstraite modèle.
  * Centralise les services d'accès à une base de données.
  * Utilise l'API PDO de PHP.
  *
- * @author Baptiste Pesquet
+ * @author kaizeurk
  */
-abstract class ModelFactory
+class ModelFactory
 {
 	
     /** Objet PDO d'accès à la BD 
@@ -79,6 +78,11 @@ abstract class ModelFactory
         return self::$bdd;
     }
     
+    /**
+     * 
+     * @param array $fields
+     * @throws Exception
+     */
     public function getRecord(array $fields = null)
     {
     	try 
@@ -104,10 +108,18 @@ abstract class ModelFactory
     	   		}
     	   		else
     	   		{
-    	   			$sql .= $field.', ';
+    	   			if(end($fields) === $field)
+    	   			{
+         	   			$sql .= $field.' ';
+    	   				
+    	   			}
+    	   			else 
+    	   			{
+         	   			$sql .= $field.', ';
+    	   			}
     	   		}
     	   	}
-    	   	$sql .= '1 from '.$this->record->getTableDef();
+    	   	$sql .= ' from '.$this->record->getTableDef();
     	} 
     	catch (Exception $e) 
     	{

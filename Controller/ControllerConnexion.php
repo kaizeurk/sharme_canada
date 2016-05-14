@@ -12,6 +12,12 @@ class ControllerConnexion extends Controller
 {
 	const ERROR_MSG = -1;
 	const GOD_MSG   = 1;
+    
+    /**
+     * 
+     * @var string
+     */
+    const CONTROLLER_NAME = 'connexion';
     /**
      * 
      * @var Member

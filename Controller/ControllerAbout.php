@@ -12,6 +12,12 @@ class ControllerAbout extends Controller {
 
     private $record;
     
+    /**
+     * 
+     * @var string
+     */
+    const CONTROLLER_NAME = 'about';
+    
     public function __construct() 
     {
     }

@@ -8,6 +8,13 @@ require_once 'Framework/Controller.php';
  */
 abstract class ControllerPersonnalise extends Controller
 {
+    
+    /**
+     * 
+     * @var string
+     */
+    const CONTROLLER_NAME = 'personnalise';
+    
     /**
      * Redéfinition permettant d'ajouter les infos members aux données des views 
      * 

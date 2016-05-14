@@ -10,6 +10,12 @@ require_once 'Model/person/Member.php';
  */
 class ControllerMember extends ControllerSecurise
 {
+    
+    /**
+     * 
+     * @var string
+     */
+    const CONTROLLER_NAME = 'member';
     /**
      * 
      * @var Member

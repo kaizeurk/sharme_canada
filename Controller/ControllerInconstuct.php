@@ -8,7 +8,14 @@ require_once 'Framework/Controller.php';
  * 
  * @author Baptiste Pesquet
  */
-class ControllerInconstuct extends Controller {
+class ControllerInconstuct extends Controller 
+{
+    
+    /**
+     * 
+     * @var string
+     */
+    const CONTROLLER_NAME = 'Inconstrut';
 
     private $record;
     

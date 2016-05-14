@@ -20,29 +20,7 @@
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800" rel="stylesheet" type="text/css" />
 
 		<!-- CORE CSS -->
-            <link rel="stylesheet" href="<?=$racineWebFront ?>Contenu/assets/plugins/bootstrap/css/bootstrap.min.css" type="text/css" media="all" />
-            <link rel="stylesheet" href="<?=$racineWebFront ?>Contenu/assets/css/font-awesome.css" type="text/css" media="all" />
-            <link rel="stylesheet" href="<?=$racineWebFront ?>Contenu/assets/plugins/bootstrap/css/bootstrap.min.css" type="text/css" media="all" />
-            <link rel="stylesheet" href="<?=$racineWebFront ?>Contenu/assets/plugins/owl-carousel/owl.theme.css" type="text/css" media="all" />
-            <link rel="stylesheet" href="<?=$racineWebFront ?>Contenu/assets/plugins/owl-carousel/owl.transitions.css" type="text/css" media="all" />
-            <link rel="stylesheet" href="<?=$racineWebFront ?>Contenu/assets/plugins/magnific-popup/magnific-popup.css" type="text/css" media="all" />
-            <link rel="stylesheet" href="<?=$racineWebFront ?>Contenu/assets/css/superslides.css" type="text/css" media="all" />
-            <link rel="stylesheet" href="<?=$racineWebFront ?>Contenu/assets/css/animate.css" type="text/css" media="all" />
-            <link rel="stylesheet" href="<?=$racineWebFront ?>Contenu/assets/css/blog.css" type="text/css" media="all" />
-
-        <!--{# REVOLUTION SLIDER #}-->
-            <link rel="stylesheet" href="<?=$racineWebFront ?>Contenu/assets/plugins/revolution-slider/css/settings.css" type="text/css" media="all" />
-
-       <!--{# THEME CSS #}-->
-            <link rel="stylesheet" href="<?=$racineWebFront ?>Contenu/assets/css/essentials.css" type="text/css" media="all" />
-            <link rel="stylesheet" href="<?=$racineWebFront ?>Contenu/assets/css/layout.css" type="text/css" media="all" />
-            <link rel="stylesheet" href="<?=$racineWebFront ?>Contenu/assets/css/layout-responsive.css" type="text/css" media="all" />
-            <link rel="stylesheet" href="<?=$racineWebFront ?>Contenu/assets/css/color_scheme/orange.css" type="text/css" media="all" />
-
-        <!--{# STYLESWITCHER - REMOVE ON PRODUCTION/DEVELOPMENT #}-->
-            <link rel="stylesheet" href="<?=$racineWebFront ?>Contenu/assets/plugins/styleswitcher/styleswitcher.css" type="text/css" media="all" />
-
-
+		<?php include_once 'View/_Commun/cssPartial.php';?>
 
             <script type="text/javascript" src="<?=$racineWebFront ?>Contenu/assets/plugins/modernizr.min.js"></script>
 
@@ -168,124 +146,89 @@
 				<div class="navbar-collapse nav-main-collapse collapse pull-right">
 					<nav class="nav-main mega-menu">
 						<ul class="nav nav-pills nav-main scroll-menu" id="topMain">
-							<li class="dropdown active">
+							<li id="accueil" class="dropdown active">
 								<a class="dropdown-toggle" href="#">
 									Home <i class="fa fa-angle-down"></i>
 								</a>
 								<ul class="dropdown-menu">
 									<li class="dropdown-submenu"><a href="#">Acceuil nouveaux arrivants</a>
 										<ul class="dropdown-menu">
-											<li><a href="revolution-half-slider.html">Acceuil à l'a&#233;roport</a></li>
-											<li><a href="revolution-full-slider.html">Accompagnement</a></li>
-											<li><a href="revolution-video.html">Aide à l'int&#233;gration</a></li>
-											<li><a href="revolution-ken-burns.html">Activit&#233;s d'orientation et conseil</a></li>
-											<li><a href="revolution-official-1.html">Autres</a></li>
+											<li><a href="#">Acceuil à l'a&#233;roport</a></li>
+											<li><a href="#">Accompagnement</a></li>
+											<li><a href="#">Aide à l'int&#233;gration</a></li>
+											<li><a href="#">Activit&#233;s d'orientation et conseil</a></li>
+											<li><a href="#">Autres</a></li>
 										</ul>
 									</li>
 									<li class="dropdown-submenu"><a href="{{ path('sharmecanadaplatform_activity_file') }}">Activit&#233;s familiales</a>
 										<ul class="dropdown-menu">
-											<li><a href="superslides-slider-half.html">Cabane à sucre</a></li>
-											<li><a href="superslides-slider-full.html">BBQ</a></li>
-											<li><a href="superslides-video.html">Sorties de familles</a></li>
-											<li><a href="superslides-video-full.html">Reunion conseil de familles</a></li>
+											<li><a href="#">Cabane à sucre</a></li>
+											<li><a href="#">BBQ</a></li>
+											<li><a href="#">Sorties de familles</a></li>
+											<li><a href="#">Reunion conseil de familles</a></li>
 										</ul>
 									</li>
 									<li class="divider"></li>
-									<li><a href="index-extended.html">Extended</a></li>
-									<li><a href="portfolio-home.html">Portfolio</a></li>
-									<li><a href="shop-home.html">Shop</a></li>
-									<li><a href="realestate-home.html">Real Estate</a></li>
-									<li><a href="church-home.html">Church</a></li>
-									<li><a href="medical-home.html">Medical</a></li>
-									<li><a href="college-home.html">College</a></li>
+									<li><a href="#">Extended</a></li>
+									<li><a href="#">Portfolio</a></li>
+									<li><a href="#">Shop</a></li>
+									<li><a href="#">Real Estate</a></li>
+									<li><a href="#">Church</a></li>
+									<li><a href="#">Medical</a></li>
+									<li><a href="#">College</a></li>
 									<li class="divider"></li>
-									<li><a href="onepage-superslides.html" target="_blank">Onepage - Superslides</a></li>
-									<li><a href="onepage-revolution.html" target="_blank">Onepage - Revolution</a></li>
-									<li><a href="index-more.html">More...</a></li>
+									<li><a href="#">More...</a></li>
 								</ul>
 							</li>
-							<li class="dropdown mega-menu-item mega-menu-fullwidth">
+							<li id="activity" class="dropdown">
 								<a class="dropdown-toggle" href="#">
 									Activit&#233;s<i class="fa fa-angle-down"></i>
 								</a>
 								<ul class="dropdown-menu">
-									<li>
-										<div class="mega-menu-content">
-											<div class="row">
-												<div class="col-md-3">
-													<ul class="sub-menu">
-														<li>
-															<span class="mega-menu-sub-title">General Features</span>
-															<ul class="sub-menu">
-																<li><a href="feature-grid-system.html">Grid System</a></li>
-																<li><a href="feature-icons.html">Icons</a></li>
-																<li><a href="feature-pricing-tables.html"><em>Pricing Tables</em></a></li>
-																<li><a href="feature-testimonials.html"><em>Testimonials</em></a></li>
-																<li><a href="email-template.html"><em>Email Template</em></a></li>
-																<li><a href="shortcodes-rows.html"><em>Shortcodes</em></a></li>
-																<li><a href="feature-animations.html">Animations</a></li>
-																<li><a href="feature-typograpy.html">Typograpy</a></li>
-															</ul>
-														</li>
-													</ul>
-												</div>
-												<div class="col-md-3">
-													<ul class="sub-menu">
-														<li>
-															<span class="mega-menu-sub-title">Sliders</span>
-															<ul class="sub-menu">
-																<li><a href="feature-content-carousel.html">Content Carousel</a></li>
-																<li><a href="revolution-official-1.html">(17) Premium Revolution Slider</a></li>
-															</ul>
-														</li>
-													</ul>
-												</div>
-												<div class="col-md-3">
-													<ul class="sub-menu">
-														<li>
-															<span class="mega-menu-sub-title">Headers</span>
-															<ul class="sub-menu">
-																<li><a href="header-1.html">Header Version 1</a></li>
-																<li><a href="header-2.html">Header Version 2</a></li>
-																<li><a href="header-3.html">Header Version 3</a></li>
-																<li><a href="header-4.html">Header Version 4</a></li>
-															</ul>
-														</li>
-													</ul>
-												</div>
-												<div class="col-md-3">
-													<ul class="sub-menu">
-														<li>
-															<span class="mega-menu-sub-title">Unique Bonuses</span>
-															<ul class="sub-menu">
-																<li><a href="onepage-superslides.html" target="_blank">Onepage - Superslides</a></li>
-																<li><a href="onepage-revolution.html" target="_blank">Onepage - Revolution</a></li>
-																<li><a href="email-template.html">Email Template</a></li>
-															</ul>
-														</li>
-													</ul>
-												</div>
-											</div>
-										</div>
+									<li class="dropdown-submenu"><a href="#">Acceuil nouveaux arrivants</a>
+										<ul class="dropdown-menu">
+											<li><a href="#">Acceuil à l'a&#233;roport</a></li>
+											<li><a href="#">Accompagnement</a></li>
+											<li><a href="#">Aide à l'int&#233;gration</a></li>
+											<li><a href="#">Activit&#233;s d'orientation et conseil</a></li>
+											<li><a href="#">Autres</a></li>
+										</ul>
+									</li>
+									<li class="dropdown-submenu"><a href="<?=$racineWebFront ?>activity">Activit&#233;s familiales</a>
+										<ul class="dropdown-menu">
+											<li><a href="#">Cabane à sucre</a></li>
+											<li><a href="#">BBQ</a></li>
+											<li><a href="#">Sorties de familles</a></li>
+											<li><a href="#">Reunion conseil de familles</a></li>
+										</ul>
 									</li>
 								</ul>
 							</li>
 
-							<li class="dropdown">
+							<li id="blog" class="dropdown">
 								<a class="dropdown-toggle" href="#">
 									Blog <i class="fa fa-angle-down"></i>
 								</a>
 								<ul class="dropdown-menu">
-									<li><a href="blog-full-width.html">Blog Without Sidebar</a></li>
-									<li><a href="blog-post.html">Single Post</a></li>
+									<li><a href="#">Blog Without Sidebar</a></li>
+									<li><a href="#">Single Post</a></li>
 								</ul>
 							</li>
-							<li class="dropdown">
-					            <a href="{{ path('sharmecanadaplatform_advice') }}">Conseils<i class="fa fa-angle-down"></i></a>
+							<li id="conseil" class="dropdown">
+					            <a href="#">Conseils<i class="fa fa-angle-down"></i></a>
 
 							</li>
-							<li class="dropdown mega-menu-item mega-menu-two-columns">
+							<li class="dropdown">
                                 <a class="dropdown-toggle" href="<?=$racineWebFront ?>about">Apropos<i class="fa fa-angle-down"></i></a>
+								<ul class="dropdown-menu">
+									<li><a href="<?=$racineWebFront ?>about#projetId">Parrainage de nouveaux arrivants</a></li>
+									<li><a href="<?=$racineWebFront ?>about#howToWorkId">Comment nous operons</a></li>
+									<li><a href="<?=$racineWebFront ?>about#domaineId">Domaines d'intervention</a></li>
+									<li><a href="<?=$racineWebFront ?>about#objectifId">Objectifs visés par le projet</a></li>
+									<li><a href="<?=$racineWebFront ?>about#longId">Durée du parrainge</a></li>
+									<li><a href="<?=$racineWebFront ?>about#budgetId">Budget du projet</a></li>
+									<li><a href="<?=$racineWebFront ?>about#documentId">Document a fournir</a></li>
+								</ul>
 
 							</li>
 							<li class="dropdown">

@@ -47,7 +47,7 @@
 					    L'importance du projet de parrainage des nouveaux arrivants réside essentiellement dans le fait que ces derniers arrivent le plus souvent avec des enfants de très jeunes âge ayant besoin de surveillance dans les domaines de l'éducation, la santé, la scolarisation sans quoi ils seraient marqués à vie .Tant que cette surveillance et ce soutient interviennent tôt, tant l'action caritative est bénéfique et facilite l'accès aux autres périodes de la vie.
 					 </p>
 					
-					<h3>COMMENT NOUS OPERONS ?</h3>
+					<h3 id = "howToWorkId">COMMENT NOUS OPERONS ?</h3>
 					
 					<p>
 					   Nous recevons des demandes de nouveaux immigrants par l’entremise de notre site internet ou des autres familles ayant bénéficiés de nos services, nous effectuons des visites de terrains et de prospection au sein des associations socioculturelles d’ici et d’ailleurs afin de pouvoir établir un diagnostic sur sa situation effective.
@@ -62,7 +62,7 @@
 					   Nous ne nous contentons pas d'encourager le parrain à fournir son soutien au nouvel immigrant. Nous veillons à établir un lien affectif entre le parrain, l’immigrant et sa famille. Nous évaluons les services et le niveau de satisfaction du bénéficiaire. Nous nous sommes fixés un objectif <<zéro>> pour zéro échec dans note mission pour l’année 2015.
 					</p>
 					
-					<h3>DOMAINES D'INTERVENTION</h3>
+					<h3 id = "domaineId" >DOMAINES D'INTERVENTION</h3>
 					<ul>
 					    <li>
 					        fournir un service personnalisé en conseil et orientation familiale  au nouvel immigrant sur les réalités de la vie familiale dans sa future terre d’accueil.
@@ -86,12 +86,12 @@
 					
 					
 					
-					<h3>OBJECTIFS VISES PAR LE PROJET</h3>
+					<h3 id = "objectifId">OBJECTIFS VISES PAR LE PROJET</h3>
 					<p>
 					   L'objectif essentiel du projet est de parrainer les nouveaux immigrants au sein et de les intégrer à leur environnement ainsi que de les protéger contre la déperdition, le vagabondage et de les préparer pour qu'ils soient en mesure de se prendre en charge.
 					</p>
 					
-					<h3>DUREE DU PARRAINAGE</h3>
+					<h3 id = "longId">DUREE DU PARRAINAGE</h3>
 					<ul>
 					    <li>Nous parrainons les nouveaux immigrants jusqu'à ce qu’ils se sentent chez eux.
 					    </li>
@@ -103,12 +103,12 @@
 					    </li>
 					 </ul>
 					
-					<h3>BUDGET DU PROJET</h3>
+					<h3 id = "budgetId">BUDGET DU PROJET</h3>
 					<p>
 					   Le montant que nous préconisons par défaut pour le parrainage d'un nouvel immigrant est fonction des conditions de vie de celui-ci et de sa situation au moment de son arrivée au Canada. Le budget nous incombe et nous assumons entièrement les couts qu’engendrent ces services.
 					</p>
 					
-					<h3>DOCUMENT A FOURNIR POUR PROFITER D'UN PARRAINAGE</h3>
+					<h3 id = "documentId">DOCUMENT A FOURNIR POUR PROFITER D'UN PARRAINAGE</h3>
 					<ul>
 					    <li>
 					        Une photocopie d’une pièce d’identité valide avec photo.

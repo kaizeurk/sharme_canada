@@ -23,5 +23,6 @@
 		$member = null;
 	}
 	require 'lang/messages.php';
+	$dirWayName = __DIR__;
 ?>
 

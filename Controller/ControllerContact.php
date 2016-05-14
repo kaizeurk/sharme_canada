@@ -8,7 +8,14 @@ require_once 'Framework/Controller.php';
  * 
  * @author Baptiste Pesquet
  */
-class ControllerContact extends Controller {
+class ControllerContact extends Controller 
+{
+    
+    /**
+     * 
+     * @var string
+     */
+    const CONTROLLER_NAME = 'contact';
 
     private $record;
     

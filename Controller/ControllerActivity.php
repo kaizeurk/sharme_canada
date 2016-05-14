@@ -1,13 +1,14 @@
 <?php
 
-require_once 'ControllerPersonnalise.php';
+require_once 'Framework/View.php';
+require_once 'Framework/Controller.php';
 
 /**
  * Contrôleur de la page d'accueil
  * 
  * @author Baptiste Pesquet
  */
-class ControllerAccueil extends ControllerPersonnalise {
+class ControllerActivity extends Controller {
 
     private $record;
     
@@ -15,7 +16,7 @@ class ControllerAccueil extends ControllerPersonnalise {
      * 
      * @var string
      */
-    const CONTROLLER_NAME = 'home';
+    const CONTROLLER_NAME = 'activity';
     
     public function __construct() 
     {
@@ -26,10 +27,6 @@ class ControllerAccueil extends ControllerPersonnalise {
      */
     public function index() 
     {
-    	if(!($this->request->getSession()->existAttribut('role')))
-    	{
-    		$this->request->getSession()->setAttribut('role','ANONYMOUS');
-    	}
         $this->generateView();
     }
 

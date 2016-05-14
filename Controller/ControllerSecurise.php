@@ -8,6 +8,12 @@ require_once 'ControllerPersonnalise.php';
  */
 abstract class ControllerSecurise extends ControllerPersonnalise
 {
+    
+    /**
+     * 
+     * @var string
+     */
+    const CONTROLLER_NAME = 'securise';
 
     /**
      * Redéfinition permettant de vérifier qu'un client est connecté

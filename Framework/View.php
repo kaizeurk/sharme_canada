@@ -8,14 +8,18 @@ require_once 'DbConnect.php';
  */
 class View
 {
-    /** Nom du file associé à la view */
+    /**
+     * Nom du file associé à la view 
+     */
     private $file;
 
-    /** Titre de la view (défini dans le file view) */
+    /**
+     * Titre de la view (défini dans le file view) 
+     * @var string
+     */
     private $title;
     
     /**
-     * 
      * @var string
      */
     private  $racineWeb;
@@ -26,6 +30,12 @@ class View
      * @var string
      */
     private  $racineWebFront;
+    
+    /**
+     * 
+     * @var string
+     */
+    private $controller;
 
     /**
      * Constructeur
@@ -38,6 +48,7 @@ class View
         // Détermination du nom du file view à partir de l'action et du constructeur
         // La convention de nommage des files views est : View/<$controller>/<$action>.php
         $file = "View/";
+        $this->controller = $controller;
         $this->getRacine();
         if ($controller != "") {
             $file = $file . $controller . "/";
@@ -60,7 +71,7 @@ class View
         $racineWeb = DbConnect::get("racineWeb", "/");
         // Génération du gabarit commun utilisant la partie spécifique
         $view = $this->generateFile('View/layout.php',
-                array('title' => $this->title, 'contenu' => $contenu, 'racineWeb' => $racineWeb, 'racineWebFront'=>$this->racineWebFront));
+                array('title' => $this->title, 'contenu' => $contenu, 'racineWeb' => $racineWeb, 'racineWebFront'=>$this->racineWebFront, 'controller'=>$this->controller));
         // Renvoi de la view générée au navigateur
         echo $view;
     }
@@ -106,7 +117,6 @@ class View
     }
 
     /**
-     * 
      * @return string
      */
     private function getRacine()
