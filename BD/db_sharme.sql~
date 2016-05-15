@@ -9,7 +9,7 @@ USE db_sharme;
 -- rendez-vous dans le ficher ControllerConnexion.php dans la methode connecter
 -- decommenter la ligne //$this->member->install();
 -- essayer de connecter login-pass a la base de donnée sera crée a la premiere connection
--- ensuite recommenter la ligne //$this->member->install();
+-- ensuite recommenter la ligne $this->member->install();
 
 -- phpMyAdmin SQL Dump
 -- version 4.4.3

@@ -1,4 +1,17 @@
-<!-- body -->
+
+
+<!-- PAGE TITLE -->
+<header id="page-title">
+  <div class="container">
+	 <h1>Avis légale</h1>
+        <ul class="breadcrumb">
+		   <li><a href="<?=$this->racineWebFront ?>">Accueil</a></li>
+	       <li class="active">Apropos de nous</li>
+        </ul>
+  </div>
+</header>
+
+<section class="container">
 <div class = "body-context">
    <br/>
    <h1>TITRE 1 – DISPOSITION GENERALES</h1>
@@ -206,3 +219,4 @@
 
 		<!-- body -->	
 </div>
+</section>

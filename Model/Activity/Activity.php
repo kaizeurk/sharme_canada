@@ -48,6 +48,12 @@ class Activity
      *
      */
     private $title;
+    
+    /**
+     * 
+     * @var unknown
+     */
+    public $type;
 
 
     /**

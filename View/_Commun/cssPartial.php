@@ -32,9 +32,17 @@
   	
 	$cssContain .= '<link href="'.$racineWebFront.'Contenu/assets/css/color_scheme/lightgrey.css" rel="alternate stylesheet" type="text/css" title="lightgrey" />';
 	$cssContain .= '<link href="'.$racineWebFront.'Contenu/assets/plugins/styleswitcher/styleswitcher.css" rel="stylesheet" type="text/css" />	';	
-    
+    $controlloresActive = array("accueil"    =>"",
+    		                    "about"      =>"",
+    		                    "connexion"  =>"",
+    		                    "contact"    =>"",
+    		                    "member"     =>"",
+    		                    "blog"       =>"",
+    		                    "legalnotice"=>"",
+    		                    "activity"   =>"");
     if(isset($this->controller))
     {
+    	$controlloresActive[strtolower($this->controller)] = "active";
     	if(strtolower($this->controller) == strtolower('accueil'))
     	{
 		  $cssContain .= '<link href="'.$racineWebFront.'Contenu/assets/plugins/revolution-slider/css/settings.css" rel="stylesheet" type="text/css" />';
