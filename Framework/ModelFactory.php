@@ -147,4 +147,8 @@ class ModelFactory
     	 
     }
 
+    public function deleteRecord( $id = null )
+    {
+    
+    }
 }

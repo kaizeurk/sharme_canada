@@ -24,7 +24,7 @@ abstract class Model
     protected $tableDef;
     
     /**
-     * this contains all madatory needed to fetch correcte date in database
+     * this contains all mandatory needed to fetch correcte data in database
      * @var array
      */
     protected $mandatoryFields;
@@ -36,8 +36,8 @@ abstract class Model
     protected $primaryKeys;
     
     /**
-     * 
-     * @var string
+     * contains all fields of table
+     * @var array
      */
     protected $fieldsList;
     
