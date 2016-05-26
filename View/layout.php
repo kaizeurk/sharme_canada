@@ -138,10 +138,17 @@
 				</button>
 
 				<!-- Logo text or image -->
-				<a class="logo" href="<?=$racineWebFront ?>">
+				<?php 
+				if(!isset($member)) { ?>
+				<a class="logo" href="<?= $racineWebFront ?>">
+				<?php 
+				}
+				else { ?>
+					<a class="logo" href="<?=$racineWebFront ?>member/memberspace">
+				<?php 
+				} ?>
 					SH<img src="<?=$racineWebFront ?>Contenu/assets/images/icon/canada-qc.png" alt="SHARME"/>RME CANADA
 				</a>
-
 				<!-- Top Nav -->
 				<div class="navbar-collapse nav-main-collapse collapse pull-right">
                       <?php include_once 'View/_Commun/navBar.php'; ?>
@@ -150,6 +157,8 @@
 
 			</div>
 		</header>
+		
+		<span id="header_shadow"></span>
 
 		<!-- body -->
 		<div id="wrapper" class = "body">

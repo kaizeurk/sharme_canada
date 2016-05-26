@@ -3,7 +3,7 @@
 						<ul class="nav nav-pills nav-main scroll-menu" id="topMain">
 							<li id="accueil" class="dropdown <?=$controlloresActive["accueil"] ?>">
 								<a class="dropdown-toggle" href="#">
-									Home <i class="fa fa-angle-down"></i>
+									<?= $lang['MENU_HOME'][$langId] ?> <i class="fa fa-angle-down"></i>
 								</a>
 								<ul class="dropdown-menu">
 									<li class="dropdown-submenu"><a href="#">Acceuil nouveaux arrivants</a>

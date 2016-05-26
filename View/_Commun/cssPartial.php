@@ -46,7 +46,6 @@
     	if(strtolower($this->controller) == strtolower('accueil'))
     	{
 		  $cssContain .= '<link href="'.$racineWebFront.'Contenu/assets/plugins/revolution-slider/css/settings.css" rel="stylesheet" type="text/css" />';
-
     	}
     	elseif (strtolower($this->controller) == strtolower('about'))
     	{
@@ -62,6 +61,7 @@
     	}
     	elseif (strtolower($this->controller) ==  strtolower('member'))
     	{
+    		$cssContain .= '<link href="'.$racineWebFront.'Contenu/assets/css/blog.css" rel="stylesheet" type="text/css" />';
     	}
     	elseif (strtolower($this->controller) ==  strtolower("activity"))
     	{

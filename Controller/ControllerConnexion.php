@@ -113,7 +113,7 @@ class ControllerConnexion extends Controller
         $member = $this->member->getMember($courriel, $mdp);
         $this->request->getSession()->setAttribut("member", $member);
         $this->request->getSession()->setAttribut("role", "MEMBER");
-        $this->redirect("accueil");
+        $this->redirect("member", "memberspace");
     }
     
     /**

@@ -34,6 +34,14 @@ class ControllerMember extends ControllerSecurise
     {
         $this->generateView();
     }
+    
+    /**
+     * Affiche la page d'accueil de l'espace membre
+     */
+    public function memberspace()
+    {
+    	$this->generateView();
+    }
 
     /**
      * Modifie les infos member

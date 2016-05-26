@@ -17,11 +17,11 @@
   
   // Menu
   
-  $lang['MENU_HOME']         = array("fr"=>"Aceuil", 
+  $lang['MENU_HOME']         = array("fr"=>"Acceuil", 
   		                             "en"=>"Home");
   $lang['MENU_ABOUT_US']     = array("fr"=>"Apropos de nous", 
   		                             "en"=>"About Us");
-  $lang['MENU_OUR_PRODUCTS'] = array("fr"=>"Aceuil", 
+  $lang['MENU_OUR_PRODUCTS'] = array("fr"=>"Acceuil", 
   		                             "en"=>"Home");
   $lang['MENU_CONTACT_US']   = array("fr"=>"Nous joindre",  
   		                             "en"=>"Contact Us");
